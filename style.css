@@ -14,9 +14,9 @@ section {
     background: #131313;
 }
 
-.intro-section {
+.home-section {
     height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(115, 113, 113, 0.2)), url('bg2.png');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(115, 113, 113, 0.2)), url('bg4k.png');
     color: white;
     font-size: 40px;
     font-family: 'Cyber', sans-serif;
@@ -29,7 +29,7 @@ footer {
     background-color: #262626;
 }
 
-nav {
+.navigation-bar {
     /*background-color: #333;*/
     display: flex;
     justify-content: space-between;
@@ -38,7 +38,12 @@ nav {
     padding-left: 40px;
 }
 
-ul {
+.navigation-bar h3 span {
+    color: #41B883;
+}
+
+
+.navigation-bar ul {
     display: flex;
     list-style-type: none;
     width: 500px;
@@ -46,38 +51,78 @@ ul {
     font-size: 25px;
 }
 
-li {
+.navigation-bar li {
     display: flex;
     align-items: center;
     text-decoration: none;
     transition: 0.3s;
 }
 
-li:hover {
+.navigation-bar li:hover {
     cursor: pointer;
     color: #41B883;
 }
 
-h1 {
-    font-size: 90px;
-}
-
-.intro-content {
-    margin-left: 180px;
-    margin-top: 320px;
-}
-
-.intro-content p span {
-    font-size: 50px;
-    color: #41B883;
-}
-
-nav > h3 > span {
-    color: #41B883;
+.home-content {
+    padding-left: 180px;
+    padding-top: 320px;
+    padding-bottom: 180px;
 }
 
 .name {
     font-family: sans-serif;
+}
+
+/*
+.home-content h2 {
+    font-size: 80px;
+}*/
+
+.home-content h2 span {
+    font-size: 80px;
+    color: #41B883;
+}
+
+.projects {
+    height: auto;
+}
+
+.project-content {
+    display: block;
+    padding-left: 120px;
+    font-size: 50px;
+    position: fixed;
+    top: 40vh;
+    color: white;
+    width: 40%;
+    height: 200px;
+    font-family: 'Cyber', sans-serif;
+}
+
+.project-content ul {
+    font-size: 20px;
+    width: auto;
+    display: flex;
+    list-style: disc;
+}
+
+.project-content ul > li {
+    list-style-position: inside;
+    padding-right: 40px;
+}
+
+.project {
+    display: flex;
+    flex-flow: column;
+    margin-left: 50%;
+}
+
+.project-images {
+    height: 800px;
+    background: #41B883;
+    color: white;
+    font-family: 'Cyber', sans-serif;
+    font-size: 50px;
 }
 
 .btn-glitch {
