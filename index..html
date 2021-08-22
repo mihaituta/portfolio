@@ -9,20 +9,23 @@
     <body>
 
         <section class="home-section">
-            <nav class="navigation-bar">
-                <h3>Port<span>folio</span></h3>
-                <ul>
-                    <li>PROJECTS</li>
-                    <li>ABOUT ME</li>
-                    <li>SKILLS</li>
-                    <li>CONTACT</li>
+            <nav class="nav-bar">
+                <h3 class="nav-bar-title">Port<span>folio</span></h3>
+                <ul class="nav-list">
+                    <li class="nav-list-item">PROJECTS</li>
+                    <li class="nav-list-item">ABOUT ME</li>
+                    <li class="nav-list-item">SKILLS</li>
+                    <li class="nav-list-item">CONTACT</li>
                 </ul>
             </nav>
             <div class="home-content">
-                <h1 class="name">Hi, I'm Mihai Tuță</h1>
+                <h1 class="home-name">Hi, I'm Mihai Tuță</h1>
                 <h2>I'm a <span>web developer</span></h2>
                 <button class="btn-glitch">
                     About me
+                </button>
+                <button class="btn-glitch">
+                    Contact me
                 </button>
             </div>
 
@@ -49,7 +52,32 @@
 
         <section></section>
         <section></section>
-        <section></section>
+        <section class="contact-section">
+            <!--      <iframe
+                          width="600"
+                          height="450"
+                          style="border:0"
+                          loading="lazy"
+                          allowfullscreen
+                          src="https://www.google.com/maps/embed/v1/place?key=API_KEY
+          &q=Space+Needle,Seattle+WA">
+                  </iframe>-->
+            <div id="map"></div>
+            <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+            <script
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9J7TMvE3hvxUdrKBJI-14Cz5MFDIpBNU&callback=initGoogleMap"
+                    async
+            ></script>
+            <div>
+                <form action="">
+                    <h2>Contact Me</h2>
+                    <input type="text" placeholder="Your Name *">
+                    <input type="text" placeholder="Your Email *">
+                    <textarea name="textArea" id="" cols="30" rows="10" placeholder="Message *"></textarea>
+                </form>
+            </div>
+
+        </section>
         <footer></footer>
 
         <script src="app.js"></script>

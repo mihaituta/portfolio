@@ -1,3 +1,7 @@
+/* ===========================================
+                 GLOBAL STYLES
+ ========================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +12,15 @@
     src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
     font-display: swap;
 }
+
+/* ===========================================
+                 TYPOGRAPHY
+ ========================================== */
+
+
+/* ===========================================
+                   LAYOUT
+ ========================================== */
 
 section {
     height: 500px;
@@ -24,12 +37,33 @@ section {
     background-size: cover;
 }
 
+.home-content {
+    padding-left: 180px;
+    padding-top: 320px;
+    padding-bottom: 180px;
+}
+
+.home-name {
+    font-family: sans-serif;
+}
+
+.home-content h2 span {
+    font-size: 80px;
+    color: #41B883;
+}
+
 footer {
     height: 500px;
     background-color: #262626;
 }
 
-.navigation-bar {
+/* ===========================================
+                 COMPONENTS
+ ========================================== */
+
+/* ------------ NAVIGATION BAR ------------ */
+
+.nav-bar {
     /*background-color: #333;*/
     display: flex;
     justify-content: space-between;
@@ -38,12 +72,11 @@ footer {
     padding-left: 40px;
 }
 
-.navigation-bar h3 span {
+.nav-bar-title span {
     color: #41B883;
 }
 
-
-.navigation-bar ul {
+.nav-list {
     display: flex;
     list-style-type: none;
     width: 500px;
@@ -51,40 +84,38 @@ footer {
     font-size: 25px;
 }
 
-.navigation-bar li {
+.nav-list-item {
     display: flex;
     align-items: center;
     text-decoration: none;
     transition: 0.3s;
 }
 
-.navigation-bar li:hover {
+.nav-list-item:hover {
     cursor: pointer;
     color: #41B883;
 }
 
-.home-content {
-    padding-left: 180px;
-    padding-top: 320px;
-    padding-bottom: 180px;
+.contact-section{
+    height: auto;
+    width: auto;
 }
 
-.name {
-    font-family: sans-serif;
+#map {
+    height: 900px;
+    width: 100%;
 }
 
-/*
-.home-content h2 {
-    font-size: 80px;
-}*/
-
-.home-content h2 span {
-    font-size: 80px;
-    color: #41B883;
-}
+/* ------------ PROJECTS ------------ */
 
 .projects {
     height: auto;
+}
+
+.project {
+    display: flex;
+    flex-flow: column;
+    margin-left: 50%;
 }
 
 .project-content {
@@ -111,12 +142,6 @@ footer {
     padding-right: 40px;
 }
 
-.project {
-    display: flex;
-    flex-flow: column;
-    margin-left: 50%;
-}
-
 .project-images {
     height: 800px;
     background: #41B883;
@@ -124,6 +149,8 @@ footer {
     font-family: 'Cyber', sans-serif;
     font-size: 50px;
 }
+
+/* ------------- BUTTONS ------------- */
 
 .btn-glitch {
     margin-top: 20px;
