@@ -54,14 +54,25 @@ section {
 }
 
 .contact-section {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 
+#map {
+    min-height: 90vh;
+    width: 100%;
 }
 
 .contact-div {
     background: #1a1919;
-    width: 25%;
+    width: 20%;
     padding: 2.5em 5em;
     font-family: 'Cyber', sans-serif;
+    position: absolute;
+    z-index: 99;
+    margin-right: 10%;
 }
 
 .contact-form {
@@ -86,8 +97,8 @@ section {
     border-width: 0 0 0.3em;
     outline: 0;
     color: white;
-   /* -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4px), calc(100% - 2px) calc(100% - 2px), 102px calc(100% - 2px), 100px 100%, 4px 100%, 0 calc(100% - 4px));
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4px), calc(100% - 2px) calc(100% - 2px), 102px calc(100% - 2px), 100px 100%, 4px 100%, 0 calc(100% - 4px));*/
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4px), calc(100% - 2px) calc(100% - 2px), 102px calc(100% - 2px), 100px 100%, 4px 100%, 0 calc(100% - 4px));
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4px), calc(100% - 2px) calc(100% - 2px), 102px calc(100% - 2px), 100px 100%, 4px 100%, 0 calc(100% - 4px));
 }
 
 .form-elements:focus {
@@ -152,11 +163,6 @@ footer {
 .nav-list-item:hover {
     cursor: pointer;
     color: #41B883;
-}
-
-#map {
-    height: 900px;
-    width: 100%;
 }
 
 /* ------------ PROJECTS ------------ */
