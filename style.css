@@ -1,7 +1,6 @@
 /* ===========================================
                  GLOBAL STYLES
  ========================================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -16,14 +15,16 @@
 /* ===========================================
                  TYPOGRAPHY
  ========================================== */
-
+body {
+    font-size: 16px;
+}
 
 /* ===========================================
                    LAYOUT
  ========================================== */
 
 section {
-    height: 500px;
+    min-height: 500px;
     background: #131313;
 }
 
@@ -31,7 +32,7 @@ section {
     height: 100vh;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(115, 113, 113, 0.2)), url('bg4k.png');
     color: white;
-    font-size: 40px;
+    font-size: 3em;
     font-family: 'Cyber', sans-serif;
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,8 +49,65 @@ section {
 }
 
 .home-content h2 span {
-    font-size: 80px;
+    font-size: 1.2em;
     color: #41B883;
+}
+
+.contact-section {
+
+}
+
+.contact-div {
+    background: #1a1919;
+    width: 25%;
+    padding: 2.5em 5em;
+    font-family: 'Cyber', sans-serif;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.6em;
+    text-align: center;
+    color: white;
+}
+
+.form-elements {
+    font-size: 1.2em;
+    margin: 0.8em;
+    padding: 0.7em 1em;
+    width: 100%;
+    background: #262626;
+    border-width: 0 0 0.3em;
+    outline: 0;
+    color: white;
+   /* -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4px), calc(100% - 2px) calc(100% - 2px), 102px calc(100% - 2px), 100px 100%, 4px 100%, 0 calc(100% - 4px));
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4px), calc(100% - 2px) calc(100% - 2px), 102px calc(100% - 2px), 100px 100%, 4px 100%, 0 calc(100% - 4px));*/
+}
+
+.form-elements:focus {
+    border-bottom-color: #41B883;
+}
+
+.contact-form input {
+
+}
+
+.contact-form input::placeholder {
+    font-family: 'Cyber', sans-serif;
+}
+
+.contact-message {
+    resize: none
+}
+
+.contact-message::placeholder {
+    font-family: 'Cyber', sans-serif;
 }
 
 footer {
@@ -94,11 +152,6 @@ footer {
 .nav-list-item:hover {
     cursor: pointer;
     color: #41B883;
-}
-
-.contact-section{
-    height: auto;
-    width: auto;
 }
 
 #map {
