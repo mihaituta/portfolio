@@ -1,9 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium&display=swap');
+
 /* ===========================================
                  GLOBAL STYLES
  ========================================== */
-* {
+:root {
+    --clr-green-300: hsl(153, 79%, 56%);
+    --clr-green-500: hsl(153, 48%, 49%);
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+
+}
+
+*, *:before, *:after {
     margin: 0;
     padding: 0;
+    box-sizing: inherit;
 }
 
 @font-face {
@@ -15,8 +29,10 @@
 /* ===========================================
                  TYPOGRAPHY
  ========================================== */
+
 body {
-    font-size: 16px;
+    color: white;
+    font-family: "Cyber", sans-serif;
 }
 
 /* ===========================================
@@ -24,34 +40,44 @@ body {
  ========================================== */
 
 section {
-    min-height: 500px;
+    min-height: 200px;
     background: #131313;
 }
 
-.home-section {
+/* ------------ HOME SECTION ------------ */
+
+.hero-section {
     height: 100vh;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(115, 113, 113, 0.2)), url('bg4k.png');
     color: white;
-    font-size: 3em;
-    font-family: 'Cyber', sans-serif;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
-.home-content {
-    padding-left: 180px;
-    padding-top: 320px;
-    padding-bottom: 180px;
+.hero-content {
+    font-family: "Oxanium", sans-serif;
+    padding: 2em;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
 }
 
-.home-name {
-    font-family: sans-serif;
+.hero-name {
+    font-size: 1.7em;
 }
 
-.home-content h2 span {
-    font-size: 1.2em;
-    color: #41B883;
+.hero-content h2 {
+    font-size: 1.7em;
 }
+
+.hero-content h2 span {
+    color: var(--clr-green-500);
+}
+
+/* ------------ CONTACT SECTION ------------ */
 
 .contact-section {
     position: relative;
@@ -66,19 +92,28 @@ section {
 }
 
 .contact-div {
-    background: #1a1919;
+    background: hsl(0, 2%, 10%);
     width: 20%;
     padding: 2.5em 5em;
-    font-family: 'Cyber', sans-serif;
     position: absolute;
-    z-index: 99;
-    margin-right: 10%;
+
+}
+
+@media (max-width: 800px) {
+    .contact-section {
+        justify-content: center;
+    }
+
+    .contact-div {
+
+    }
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 80%;
 }
 
 .contact-title {
@@ -93,7 +128,7 @@ section {
     margin: 0.8em;
     padding: 0.7em 1em;
     width: 100%;
-    background: #262626;
+    background: hsl(0, 0%, 15%);
     border-width: 0 0 0.3em;
     outline: 0;
     color: white;
@@ -102,19 +137,15 @@ section {
 }
 
 .form-elements:focus {
-    border-bottom-color: #41B883;
+    border-bottom-color: var(--clr-green-500);
 }
 
-.contact-form input {
-
-}
-
-.contact-form input::placeholder {
+.form-elements::placeholder {
     font-family: 'Cyber', sans-serif;
 }
 
 .contact-message {
-    resize: none
+    resize: none;
 }
 
 .contact-message::placeholder {
@@ -123,7 +154,7 @@ section {
 
 footer {
     height: 500px;
-    background-color: #262626;
+    background-color: hsl(0, 0%, 15%);
 }
 
 /* ===========================================
@@ -139,30 +170,44 @@ footer {
     padding-top: 10px;
     padding-right: 30px;
     padding-left: 40px;
+    position: fixed;
 }
 
+
 .nav-bar-title span {
-    color: #41B883;
+    color: var(--clr-green-500);
 }
 
 .nav-list {
     display: flex;
     list-style-type: none;
-    width: 500px;
     justify-content: space-around;
-    font-size: 25px;
+    font-size: 0.7em;
+}
+
+@media (max-width: 700px) {
+    .nav-bar {
+        flex-flow: column;
+    }
+
+    .nav-list {
+        flex-flow: column;
+    }
 }
 
 .nav-list-item {
     display: flex;
     align-items: center;
+    height: 100%;
     text-decoration: none;
     transition: 0.3s;
+    color: white;
+    padding: 0 0.5em;
 }
 
 .nav-list-item:hover {
     cursor: pointer;
-    color: #41B883;
+    color: var(--clr-green-500);
 }
 
 /* ------------ PROJECTS ------------ */
@@ -180,7 +225,7 @@ footer {
 .project-content {
     display: block;
     padding-left: 120px;
-    font-size: 50px;
+    font-size: 3em;
     position: fixed;
     top: 40vh;
     color: white;
@@ -190,20 +235,20 @@ footer {
 }
 
 .project-content ul {
-    font-size: 20px;
+    font-size: 1em;
     width: auto;
     display: flex;
     list-style: disc;
 }
 
-.project-content ul > li {
+.project-content li {
     list-style-position: inside;
     padding-right: 40px;
 }
 
 .project-images {
     height: 800px;
-    background: #41B883;
+    background: var(--clr-green-500);
     color: white;
     font-family: 'Cyber', sans-serif;
     font-size: 50px;
@@ -211,16 +256,12 @@ footer {
 
 /* ------------- BUTTONS ------------- */
 
-.btn-glitch {
-    margin-top: 20px;
-}
-
 .btn-glitch, .btn-glitch:after {
-    width: 180px;
-    height: 50px;
-    font-size: 20px;
+    width: 10em;
+    height: 2.5em;
+    font-size: 1em;
     font-family: 'Cyber', sans-serif;
-    background: linear-gradient(45deg, transparent 5%, #41B883 5%);
+    background: linear-gradient(45deg, transparent 5%, var(--clr-green-500) 5%);
     border: none;
     color: #1a1919;
     /*box-shadow: 6px 0 0 #41fc96;*/
@@ -231,7 +272,7 @@ footer {
 }
 
 .btn-glitch:hover {
-    background: linear-gradient(45deg, transparent 5%, #41fc96 5%);
+    background: linear-gradient(45deg, transparent 5%, var(--clr-green-300) 5%);
 }
 
 .btn-glitch:after {
@@ -241,15 +282,12 @@ footer {
     --slice-3: inset(10% -6px 85% 0);
     --slice-4: inset(40% -6px 43% 0);
     --slice-5: inset(80% -6px 5% 0);
-    content: 'ABOUT ME';
+    content: 'BUTTON';
     display: block;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, transparent 3%, #3cfc8a 3%, #3cfc8a 5%, #41fc96 5%);
-    text-shadow: -3px -3px 0 #ffffff, 3px 3px 0 #002aff;
+    inset: 0;
+    background: linear-gradient(45deg, transparent 3%, var(--clr-green-300) 3%, var(--clr-green-300) 5%, var(--clr-green-300) 5%);
+    text-shadow: -3px -3px 0 white, 3px 3px 0 #002aff;
     clip-path: var(--slice-0);
 }
 
@@ -305,3 +343,12 @@ footer {
         transform: translate(0);
     }
 }
+
+.hero-btn {
+    margin-top: 1.5em;
+}
+
+.hero-btn:after {
+    content: "PROJECTS";
+}
+

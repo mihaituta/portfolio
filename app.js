@@ -1,4 +1,4 @@
-window.onscroll = function () {
+/*window.onscroll = function () {
     const infinityFood = document.querySelector('#infinityFood');
     const infinityCode = document.querySelector('#infinityCode');
     const spaceGame = document.querySelector('#spaceGame');
@@ -45,9 +45,9 @@ window.onscroll = function () {
         livePreviewBtn.style.visibility = "hidden"
         githubBtn.style.visibility = "hidden"
     }
-}
+}*/
 
-function populateUL(array) {
+/*function populateUL(array) {
     const list = document.createElement('ul');
 
     for (let i = 0; i < array.length; i++) {
@@ -69,7 +69,7 @@ function isScrolledIntoView(elem) {
     const isVisible = (elemTop <= 250) && (elemBottom >= 250)
 
     return isVisible
-}
+}*/
 
 
 function initGoogleMap() {
@@ -89,3 +89,4 @@ function initGoogleMap() {
     });
 }
 
+ 

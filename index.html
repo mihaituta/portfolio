@@ -1,58 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Mihai Tuta Portfolio</title>
         <link rel="stylesheet" href=style.css>
         <script src="app.js"></script>
     </head>
-    <body>
 
-        <section class="home-section">
+    <body>
+        <section class="hero-section">
+
             <nav class="nav-bar">
-                <h3 class="nav-bar-title">Port<span>folio</span></h3>
+                <h1 class="nav-bar-title">Port<span>folio</span></h1>
                 <ul class="nav-list">
-                    <li class="nav-list-item">PROJECTS</li>
-                    <li class="nav-list-item">ABOUT ME</li>
-                    <li class="nav-list-item">SKILLS</li>
-                    <li class="nav-list-item">CONTACT</li>
+                    <li><a class="nav-list-item" href="#projects">PROJECTS</a></li>
+                    <li><a class="nav-list-item" href="#aboutMe">ABOUT ME</a></li>
+                    <li><a class="nav-list-item" href="#skills">SKILLS</a></li>
+                    <li><a class="nav-list-item" href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
-            <div class="home-content">
-                <h1 class="home-name">Hi, I'm Mihai Tuță</h1>
+
+            <div class="hero-content">
+                <h1 class="hero-name">Hi, I'm Mihai Tuță</h1>
                 <h2>I'm a <span>web developer</span></h2>
-                <button class="btn-glitch">
-                    About me
-                </button>
-                <button class="btn-glitch">
-                    Contact me
+                <button class="btn-glitch hero-btn">
+                    Projects
                 </button>
             </div>
 
         </section>
 
-           <section id="projects" class="projects">
+        <!-- <section id="projects" class="projects">
 
-               <div class="project-content">
-                   <h1 id="project-title" class="project-title"></h1>
-                   <ul id="project-skills"></ul>
-                   <p id="project-description" class="project-description"></p>
-                   <button id="live-preview-btn">LIVE PREVIEW</button>
-                   <button id="github-btn">GITHUB CODE</button>
-               </div>
+             <div class="project-content">
+                 <h1 id="project-title" class="project-title"></h1>
+                 <ul id="project-skills"></ul>
+                 <p id="project-description" class="project-description"></p>
+                 <button id="live-preview-btn">LIVE PREVIEW</button>
+                 <button id="github-btn">GITHUB CODE</button>
+             </div>
 
-               <div id="project" class="project">
-                   <div id="infinityFood" class="infinityFood project-images">Infinity Food</div>
-                   <div id="infinityCode" class="infinityCode project-images">Infinity Code</div>
-                   <div id="spaceGame" class="spaceGame project-images">Space Game</div>
-                   <div id="testeGrila" class="testeGrila project-images">Teste Grila</div>
-               </div>
+             <div id="project" class="project">
+                 <div id="infinityFood" class="infinityFood project-images">Infinity Food</div>
+                 <div id="infinityCode" class="infinityCode project-images">Infinity Code</div>
+                 <div id="spaceGame" class="spaceGame project-images">Space Game</div>
+                 <div id="testeGrila" class="testeGrila project-images">Teste Grila</div>
+             </div>
 
-           </section>
+         </section>-->
 
-           <section></section>
-           <section></section>
-        <section class="contact-section">
+        <section id="aboutMe">
+            <h1>About me</h1>
+        </section>
+
+        <section id="skills">
+            <h1>Skills</h1>
+        </section>
+
+        <section id="contact" class="contact-section">
+
             <div id="map"></div>
 
             <script
@@ -61,19 +68,18 @@
             ></script>
 
             <div class="contact-div">
-                    <h1 class="contact-title">Contact Me</h1>
-                    <form class="contact-form" action="">
-                        <input class="contact-name form-elements" type="text" placeholder="Your Name *">
-                        <div class="line"></div>
-                        <input class="contact-email form-elements" type="text" placeholder="Your Email *">
-                        <textarea class="contact-message form-elements" name="textArea" id="" cols="30" rows="10"
-                                  placeholder="Message *"></textarea>
-                        <button class="btn-glitch form-button">SEND</button>
-                    </form>
+                <h1 class="contact-title">Contact Me</h1>
+                <form class="contact-form" action="">
+                    <input class="contact-name form-elements" type="text" placeholder="Your Name *">
+                    <div class="line"></div>
+                    <input class="contact-email form-elements" type="text" placeholder="Your Email *">
+                    <textarea class="contact-message form-elements" name="textArea" id="" rows="10"
+                              placeholder="Message *"></textarea>
+                    <button class="btn-glitch form-button">SEND</button>
+                </form>
             </div>
 
         </section>
-        <footer></footer>
 
         <script src="app.js"></script>
     </body>
