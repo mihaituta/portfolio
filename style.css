@@ -11,8 +11,7 @@
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
-    position:relative;
-
+    position: relative;
 }
 
 *, *:before, *:after {
@@ -37,19 +36,9 @@ body {
     overflow-x: hidden;
 }
 
-.blur::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    backdrop-filter: blur(0.3rem) brightness(0.8);
+.overflow {
+    overflow: hidden;
 }
-
-/*.blur {*/
-/*    filter: blur(0.3rem) brightness(0.7);*/
-/*    transition: 0.3s;*/
-/*    pointer-events: none;*/
-/*    user-select: none;*/
-/*}*/
 
 /* ===========================================
                    LAYOUT
@@ -93,37 +82,92 @@ section {
     color: var(--clr-green-500);
 }
 
+/* ------------ PROJECTS SECTION ------------ */
+
+.projects {
+    height: auto;
+}
+
+.project {
+    display: flex;
+    flex-flow: column;
+    margin-left: 50%;
+}
+
+.project-content {
+    display: block;
+    padding-left: 120px;
+    font-size: 3em;
+    position: fixed;
+    top: 40vh;
+    color: white;
+    width: 40%;
+    height: 200px;
+    font-family: 'Cyber', sans-serif;
+}
+
+.project-content ul {
+    font-size: 1em;
+    width: auto;
+    display: flex;
+    list-style: disc;
+}
+
+.project-content li {
+    list-style-position: inside;
+    padding-right: 40px;
+}
+
+.project-images {
+    height: 800px;
+    background: var(--clr-green-500);
+    color: white;
+    font-family: 'Cyber', sans-serif;
+    font-size: 50px;
+}
+
 /* ------------ CONTACT SECTION ------------ */
 
+/*
 .contact-section {
     position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
+*/
+
+.contact-section {
+    display: flex;
+    flex-flow: column-reverse;
+}
 
 #map {
-    min-height: 90vh;
+    min-height: 100vh;
     width: 100%;
 }
 
-.contact-div {
+/*.contact-div {
     background: hsl(0, 2%, 10%);
     width: 20%;
     padding: 2.5em 5em;
     position: absolute;
-    /*z-index: 2;*/
+    !*z-index: 2;*!
+}*/
+
+.contact-div {
+    background: hsl(0, 2%, 10%);
+    width: 100%;
+    padding: 2.5em 2.2em;
 }
 
-@media (max-width: 800px) {
+/*@media (max-width: 800px) {
     .contact-section {
         justify-content: center;
     }
-
     .contact-div {
-
     }
-}
+}*/
 
 .contact-form {
     display: flex;
@@ -141,8 +185,8 @@ section {
 
 .form-elements {
     font-size: 1.2em;
-    margin: 0.8em;
-    padding: 0.7em 1em;
+    margin: 0.8rem 0;
+    padding: 0.7rem 1rem;
     width: 100%;
     background: hsl(0, 0%, 15%);
     border-width: 0 0 0.3em;
@@ -205,7 +249,6 @@ footer {
 }
 
 .nav-list {
-
     background: var(--clr-green-500);
     list-style-type: none;
     position: fixed;
@@ -255,7 +298,7 @@ footer {
 }*/
 
 .nav-list li {
-    margin: 0.3em 0;
+    margin: 1em 0;
     opacity: 0;
 }
 
@@ -311,48 +354,11 @@ footer {
     transform: rotate(45deg) translate(-0.3rem, -0.5rem);
 }
 
-/* ------------ PROJECTS ------------ */
-
-.projects {
-    height: auto;
-}
-
-.project {
-    display: flex;
-    flex-flow: column;
-    margin-left: 50%;
-}
-
-.project-content {
-    display: block;
-    padding-left: 120px;
-    font-size: 3em;
-    position: fixed;
-    top: 40vh;
-    color: white;
-    width: 40%;
-    height: 200px;
-    font-family: 'Cyber', sans-serif;
-}
-
-.project-content ul {
-    font-size: 1em;
-    width: auto;
-    display: flex;
-    list-style: disc;
-}
-
-.project-content li {
-    list-style-position: inside;
-    padding-right: 40px;
-}
-
-.project-images {
-    height: 800px;
-    background: var(--clr-green-500);
-    color: white;
-    font-family: 'Cyber', sans-serif;
-    font-size: 50px;
+.blur::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(0.3rem) brightness(0.8);
 }
 
 /* ------------- BUTTONS ------------- */
@@ -451,4 +457,9 @@ footer {
 
 .hero-btn:after {
     content: "PROJECTS";
+}
+
+.form-button {
+    margin-top: 1.5em;
+    width: 100%;
 }

@@ -77,13 +77,14 @@ const responsiveBurgerMenu = () => {
     const navButtons = document.querySelectorAll('.nav-list li')
     const content = document.querySelector('#content')
     const navLinks = document.querySelectorAll('.nav-links')
-
+    const body = document.querySelector('body')
     //Toggle nav bar
     burgerBtn.addEventListener('click', (e) => {
 
         e.stopPropagation()
         nav.classList.toggle('nav-active')
         content.classList.toggle('blur')
+        body.classList.toggle('overflow')
 
         //FadeIn navbar links
         navButtons.forEach((button, index) => {
@@ -96,9 +97,10 @@ const responsiveBurgerMenu = () => {
 
         //Close navbar when a link is clicked
         navLinks.forEach(link => link.addEventListener("click", () => {
-            nav.classList.remove("nav-active")
+            nav.classList.remove('nav-active')
             content.classList.remove('blur')
             burgerBtn.classList.remove('toggle');
+            body.classList.remove('overflow');
             navButtons.forEach((button) => {
                 button.style.animation = ''
             })
@@ -114,6 +116,7 @@ const responsiveBurgerMenu = () => {
             nav.classList.remove('nav-active')
             content.classList.remove('blur')
             burgerBtn.classList.remove('toggle');
+            body.classList.remove('overflow');
             navButtons.forEach((button) => {
                 button.style.animation = ''
             })

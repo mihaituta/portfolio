@@ -6,7 +6,7 @@ function initGoogleMap() {
         mapId: '46d5929e81efda3',
         disableDefaultUI: true,
     })
-    map.panBy(450, 0);
+    map.panBy(120, 0);
 
     new google.maps.Marker({
         position: coords,
