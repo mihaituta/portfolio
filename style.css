@@ -11,6 +11,7 @@
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
+    position:relative;
 
 }
 
@@ -33,7 +34,22 @@ html {
 body {
     color: white;
     font-family: "Cyber", sans-serif;
+    overflow-x: hidden;
 }
+
+.blur::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(0.3rem) brightness(0.8);
+}
+
+/*.blur {*/
+/*    filter: blur(0.3rem) brightness(0.7);*/
+/*    transition: 0.3s;*/
+/*    pointer-events: none;*/
+/*    user-select: none;*/
+/*}*/
 
 /* ===========================================
                    LAYOUT
@@ -96,7 +112,7 @@ section {
     width: 20%;
     padding: 2.5em 5em;
     position: absolute;
-
+    /*z-index: 2;*/
 }
 
 @media (max-width: 800px) {
@@ -164,27 +180,50 @@ footer {
 /* ------------ NAVIGATION BAR ------------ */
 
 .nav-bar {
-    /*background-color: #333;*/
+    /*background-color: rgba(10, 25, 47, 0.85);*/
+    /*backdrop-filter: blur(1em);*/
     display: flex;
     justify-content: space-between;
-    padding-top: 10px;
-    padding-right: 30px;
-    padding-left: 40px;
+    padding: 0 1.5em;
+    align-items: center;
+    min-height: 10vh;
     position: fixed;
+    /*   padding-top: 10px;
+       padding-right: 30px;
+       padding-left: 40px;
+       position: fixed;*/
+    z-index: 99;
+    width: 100%;
 }
 
+.logo {
+    font-size: 2rem;
+}
 
-.nav-bar-title span {
+.logo span {
     color: var(--clr-green-500);
 }
 
 .nav-list {
-    display: flex;
+
+    background: var(--clr-green-500);
     list-style-type: none;
-    justify-content: space-around;
-    font-size: 0.7em;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    width: 60%;
+    font-size: 1.9em;
+    transform: translateX(100%);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
+/*
 @media (max-width: 700px) {
     .nav-bar {
         flex-flow: column;
@@ -194,8 +233,18 @@ footer {
         flex-flow: column;
     }
 }
+*/
 
-.nav-list-item {
+@media screen and (max-width: 768px) {
+    /*  .nav-list {
+          display: flex;
+          list-style-type: none;
+          justify-content: space-between;
+          font-size: 0.7em;
+      }*/
+}
+
+/*.nav-links {
     display: flex;
     align-items: center;
     height: 100%;
@@ -203,11 +252,63 @@ footer {
     transition: 0.3s;
     color: white;
     padding: 0 0.5em;
+}*/
+
+.nav-list li {
+    margin: 0.3em 0;
+    opacity: 0;
 }
 
-.nav-list-item:hover {
+.nav-links {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links:hover {
     cursor: pointer;
-    color: var(--clr-green-500);
+    color: var(--clr-green-300);
+}
+
+.burger-btn {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+}
+
+.burger-btn div {
+    width: 2rem;
+    height: 0.2rem;
+    background: white;
+    margin: 0.4rem;
+    transition: all 0.3s ease;
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(5em);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0em);
+    }
+}
+
+.toggle .burger-line1 {
+    transform: rotate(-45deg) translate(-0.3rem, 0.5rem);
+}
+
+.toggle .burger-line2 {
+    opacity: 0;
+}
+
+.toggle .burger-line3 {
+    transform: rotate(45deg) translate(-0.3rem, -0.5rem);
 }
 
 /* ------------ PROJECTS ------------ */
@@ -351,4 +452,3 @@ footer {
 .hero-btn:after {
     content: "PROJECTS";
 }
-

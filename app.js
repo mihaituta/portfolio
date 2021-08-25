@@ -71,22 +71,54 @@ function isScrolledIntoView(elem) {
     return isVisible
 }*/
 
+const responsiveBurgerMenu = () => {
+    const burgerBtn = document.querySelector('.burger-btn')
+    const nav = document.querySelector('.nav-list')
+    const navButtons = document.querySelectorAll('.nav-list li')
+    const content = document.querySelector('#content')
+    const navLinks = document.querySelectorAll('.nav-links')
 
-function initGoogleMap() {
-    const coords = {lat: 51.364473520265456, lng: 6.419280449229745};
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 10,
-        center: coords,
-        mapId: '46d5929e81efda3',
-        disableDefaultUI: true,
+    //Toggle nav bar
+    burgerBtn.addEventListener('click', (e) => {
+
+        e.stopPropagation()
+        nav.classList.toggle('nav-active')
+        content.classList.toggle('blur')
+
+        //FadeIn navbar links
+        navButtons.forEach((button, index) => {
+            if (button.style.animation) {
+                button.style.animation = ''
+            } else {
+                button.style.animation = `navLinkFade 0.5s ease forwards ${index / 12}s`;
+            }
+        })
+
+        //Close navbar when a link is clicked
+        navLinks.forEach(link => link.addEventListener("click", () => {
+            nav.classList.remove("nav-active")
+            content.classList.remove('blur')
+            burgerBtn.classList.remove('toggle');
+            navButtons.forEach((button) => {
+                button.style.animation = ''
+            })
+        }))
+
+        //Burger btn animation
+        burgerBtn.classList.toggle('toggle');
     })
-    map.panBy(450,0);
 
-    new google.maps.Marker({
-        position: coords,
-        map,
-        title: "Mihai Tuta",
+    //Close navbar when clicked outside
+    document.addEventListener('click', function (e) {
+        if (!e.target.classList.contains('nav-list') && nav.classList.contains('nav-active')) {
+            nav.classList.remove('nav-active')
+            content.classList.remove('blur')
+            burgerBtn.classList.remove('toggle');
+            navButtons.forEach((button) => {
+                button.style.animation = ''
+            })
+        }
     });
 }
 
- 
+responsiveBurgerMenu()
