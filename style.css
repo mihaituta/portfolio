@@ -40,6 +40,10 @@ body {
     overflow: hidden;
 }
 
+h1 {
+    font-size: 2em;
+}
+
 /* ===========================================
                    LAYOUT
  ========================================== */
@@ -53,7 +57,7 @@ section {
 
 .hero-section {
     height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(115, 113, 113, 0.2)), url('bg4k.png');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(115, 113, 113, 0.2)), url('assets/bg4k.png');
     color: white;
     background-repeat: no-repeat;
     background-size: cover;
@@ -80,6 +84,52 @@ section {
 
 .hero-content h2 span {
     color: var(--clr-green-500);
+}
+
+.hero-btn {
+    margin-top: 1.5em;
+    width: 10em;
+}
+
+.hero-btn:after {
+    content: "PROJECTS";
+}
+
+/* ------------ ABOUT SECTION ------------ */
+
+.about-section {
+
+}
+
+.about-div {
+
+    padding: 1.2em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.about-title {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.about-div p {
+    /*text-align: justify;*/
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.resume-btn {
+    margin-top: 2em;
+    width: 100%;
+}
+
+.about-img {
+    max-width: 16em;
+    margin-bottom: 1.5em;
+    border-radius: 50%;
 }
 
 /* ------------ PROJECTS SECTION ------------ */
@@ -157,8 +207,8 @@ section {
 
 .contact-div {
     background: hsl(0, 2%, 10%);
-    width: 100%;
-    padding: 2.5em 2.2em;
+    padding: 2.5em 2em;
+    margin: 10%;
 }
 
 /*@media (max-width: 800px) {
@@ -177,14 +227,15 @@ section {
 }
 
 .contact-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 0.6em;
     text-align: center;
     color: white;
 }
 
 .form-elements {
-    font-size: 1.2em;
+    font-size: 1em;
+    font-family: 'Cyber', sans-serif;
     margin: 0.8rem 0;
     padding: 0.7rem 1rem;
     width: 100%;
@@ -202,6 +253,7 @@ section {
 
 .form-elements::placeholder {
     font-family: 'Cyber', sans-serif;
+    font-size: 1em;
 }
 
 .contact-message {
@@ -210,6 +262,11 @@ section {
 
 .contact-message::placeholder {
     font-family: 'Cyber', sans-serif;
+}
+
+.form-button {
+    margin-top: 1.5em;
+    width: 100%;
 }
 
 footer {
@@ -364,7 +421,6 @@ footer {
 /* ------------- BUTTONS ------------- */
 
 .btn-glitch, .btn-glitch:after {
-    width: 10em;
     height: 2.5em;
     font-size: 1em;
     font-family: 'Cyber', sans-serif;
@@ -449,17 +505,4 @@ footer {
         clip-path: var(--slice-1);
         transform: translate(0);
     }
-}
-
-.hero-btn {
-    margin-top: 1.5em;
-}
-
-.hero-btn:after {
-    content: "PROJECTS";
-}
-
-.form-button {
-    margin-top: 1.5em;
-    width: 100%;
 }
