@@ -4,20 +4,36 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Mihai Tuta Portfolio</title>
+        <meta name="description"
+              content="Mihai Tuta, web developer, portfolio containing details about me, my work and my skills.">
+        <title>Mihai Tuta | Web developer | Portfolio</title>
+        <link rel=icon href=favicon.ico>
         <link rel="stylesheet" href=style.css>
         <script src="map.js"></script>
+        <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
     </head>
 
     <body>
         <nav class="nav-bar">
-            <h1 class="logo">Port<span>folio</span></h1>
+            <h1 class="logo">Mihai<span> Tuță</span></h1>
             <ul class="nav-list">
                 <li><a class="nav-links" href="#hero">HOME</a></li>
                 <li><a class="nav-links" href="#projects">PROJECTS</a></li>
                 <li><a class="nav-links" href="#about">ABOUT ME</a></li>
                 <li><a class="nav-links" href="#skills">SKILLS</a></li>
                 <li><a class="nav-links" href="#contact">CONTACT</a></li>
+                <li class="nav-media-btns">
+                    <a href="mailto:tutamihai@gmail.com" rel="noreferrer" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mihai-tuta/" rel="noreferrer" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/tutamihai" rel="noreferrer" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+
             </ul>
             <div class="burger-btn">
                 <div class="burger-line1"></div>
@@ -67,9 +83,22 @@
                         and passionate about technology and
                         development, able to work in a team and I like to learn new things.</p>
                     <p>In my free time I like to go out, play video games, watch TV series or anime, and travel.</p>
-                    <button class="btn-glitch resume-btn" onclick="window.location.href='assets/CVMihaiTuta.pdf'">
-                        Resume (PDF)
-                    </button>
+
+                    <div class="media-btns-div">
+                        <button class="btn-glitch resume-btn" onclick="window.location.href='assets/CVMihaiTuta.pdf'">
+                            Resume
+                        </button>
+                        <a class="linkedin-btn media-btns" href="https://www.linkedin.com/in/mihai-tuta/"
+                           rel="noreferrer"
+                           target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="github-btn media-btns" href="https://github.com/tutamihai" rel="noreferrer"
+                           target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+
 
                 </div>
             </section>
@@ -89,6 +118,11 @@
 
                 <div class="contact-div">
                     <h1 class="contact-title">Contact Me</h1>
+
+                    <a class="contact-mail" href="mailto:tutamihai@gmail.com" rel="noreferrer" target="_blank">
+                        <p>tutamihai@gmail.com</p>
+                    </a>
+
                     <form class="contact-form" action="">
                         <input class="contact-name form-elements" type="text" placeholder="Your Name *">
                         <div class="line"></div>
@@ -100,6 +134,8 @@
                 </div>
 
             </section>
+
+            <button onclick="scrollToTop()" class="scrollBtn"><i class="fas fa-chevron-up"></i></button>
         </div>
         <script src="app.js"></script>
     </body>

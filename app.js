@@ -78,7 +78,8 @@ const responsiveBurgerMenu = () => {
     const content = document.querySelector('#content')
     const navLinks = document.querySelectorAll('.nav-links')
     const body = document.querySelector('body')
-    //Toggle nav bar
+
+    // Toggle nav bar
     burgerBtn.addEventListener('click', (e) => {
 
         e.stopPropagation()
@@ -86,7 +87,7 @@ const responsiveBurgerMenu = () => {
         content.classList.toggle('blur')
         body.classList.toggle('overflow')
 
-        //FadeIn navbar links
+        // FadeIn navbar links
         navButtons.forEach((button, index) => {
             if (button.style.animation) {
                 button.style.animation = ''
@@ -95,7 +96,7 @@ const responsiveBurgerMenu = () => {
             }
         })
 
-        //Close navbar when a link is clicked
+        // Close navbar when a link is clicked
         navLinks.forEach(link => link.addEventListener("click", () => {
             nav.classList.remove('nav-active')
             content.classList.remove('blur')
@@ -106,11 +107,11 @@ const responsiveBurgerMenu = () => {
             })
         }))
 
-        //Burger btn animation
+        // Burger menu button animation
         burgerBtn.classList.toggle('toggle');
     })
 
-    //Close navbar when clicked outside
+    // Close navbar when clicked outside
     document.addEventListener('click', function (e) {
         if (!e.target.classList.contains('nav-list') && nav.classList.contains('nav-active')) {
             nav.classList.remove('nav-active')
@@ -122,6 +123,29 @@ const responsiveBurgerMenu = () => {
             })
         }
     });
+}
+
+const scrollBtn = document.querySelector('.scrollBtn');
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+    scrollFunction()
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+        scrollBtn.classList.add('fadeIn');
+        scrollBtn.classList.remove('fadeOut');
+    } else {
+        scrollBtn.classList.remove('fadeIn');
+        scrollBtn.classList.add('fadeOut');
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 responsiveBurgerMenu()
