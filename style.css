@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxanium&display=swap');
-
 /* ===========================================
                  GLOBAL STYLES
  ========================================== */
@@ -16,7 +14,7 @@ html {
     position: relative;
 }
 
-*, *:before, *:after {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -24,8 +22,12 @@ html {
 
 @font-face {
     font-family: Cyber;
-    src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
-    font-display: swap;
+    src: url("assets/fonts/Blender-Pro-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Oxanium;
+    src: url("assets/fonts/Oxanium-Regular.ttf") format('truetype');
 }
 
 /* ===========================================
@@ -59,7 +61,7 @@ section {
 
 .hero-section {
     height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(115, 113, 113, 0.2)), url('assets/bg4k.png');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(115, 113, 113, 0.2)), url('assets/bg1.jpg');
     color: white;
     background-repeat: no-repeat;
     background-size: cover;
@@ -556,17 +558,17 @@ section {
 
 .scrollBtn {
     position: fixed;
-    bottom: 1.2rem;
-    right: 1.2rem;
+    bottom: 1.4rem;
+    right: 1.4rem;
     z-index: 99;
-    font-size: 1em;
+    font-size: 1.4em;
     border: none;
     outline: none;
     background-color: var(--clr-green-500);
     color: white;
     cursor: pointer;
-    height: 3em;
-    width: 3em;
+    height: 2.5em;
+    width: 2.5em;
     border-radius: 50%;
     -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.5);
     box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.5);
