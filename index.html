@@ -46,9 +46,9 @@
         <div id="content">
             <section id="hero" class="hero-section">
 
-                <div class="hero-content">
+                <div class="hero-container">
                     <h1 class="hero-name">Hi, I'm Mihai Tuță</h1>
-                    <h2>I'm a <span>web developer</span></h2>
+                    <h1>I'm a <span>web developer</span></h1>
                     <button class="btn-glitch hero-btn">
                         Projects
                     </button>
@@ -56,28 +56,119 @@
 
             </section>
 
-            <!-- <section id="projects" class="projects">
+            <section id="projects" class="projects-section">
+                <div class="projects-container">
+                    <h2 class="projects-title">Projects</h2>
+                    <div class="project">
+                        <div class="project-img">
+                            <a href="#" rel="noreferrer" target="_blank">
+                                <img src="assets/icO.png" alt="icO.png"/>
+                            </a>
+                        </div>
 
-                 <div class="project-content">
-                     <h1 id="project-title" class="project-title"></h1>
-                     <ul id="project-skills"></ul>
-                     <p id="project-description" class="project-description"></p>
-                     <button id="live-preview-btn">LIVE PREVIEW</button>
-                     <button id="github-btn">GITHUB CODE</button>
-                 </div>
+                        <div class="project-content">
+                            <!--                            <div class="project-label">Above project title</div>-->
+                            <h4 class="project-title"><a href="#" rel="noreferrer" target="_blank">Infinity Code</a>
+                            </h4>
+                            <div class="project-description">
+                                <p>An imaginary programming contest made during college.
+                                    Users can register for the contest,
+                                    an administration page exists where admins can add participants and news.
+                                </p>
+                            </div>
+                            <ul class="project-tools">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>PHP</li>
+                                <li>MySQL</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" rel="noreferrer" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" rel="noreferrer" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-                 <div id="project" class="project">
-                     <div id="infinityFood" class="infinityFood project-images">Infinity Food</div>
-                     <div id="infinityCode" class="infinityCode project-images">Infinity Code</div>
-                     <div id="spaceGame" class="spaceGame project-images">Space Game</div>
-                     <div id="testeGrila" class="testeGrila project-images">Teste Grila</div>
-                 </div>
+                    <div class="project">
+                        <div class="project-img">
+                            <a href="#" rel="noreferrer" target="_blank">
+                                <img src="assets/icO.png" alt="icO.png"/>
+                            </a>
+                        </div>
 
-             </section>-->
+                        <div class="project-content">
+                            <!--                            <div class="project-label">Above project title</div>-->
+                            <h4 class="project-title"><a href="#" rel="noreferrer" target="_blank">Infinity Code</a>
+                            </h4>
+                            <div class="project-description">
+                                <p>An imaginary programming contest made during college.
+                                    Users can register for the contest,
+                                    an administration page exists where admins can add participants and news.
+                                </p>
+                            </div>
+                            <ul class="project-tools">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>PHP</li>
+                                <li>MySQL</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" rel="noreferrer" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" rel="noreferrer" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-img">
+                            <a href="#" rel="noreferrer" target="_blank">
+                                <img src="assets/icO.png" alt="icO.png"/>
+                            </a>
+                        </div>
+
+                        <div class="project-content">
+                            <!--                            <div class="project-label">Above project title</div>-->
+                            <h4 class="project-title"><a href="#" rel="noreferrer" target="_blank">Infinity Code</a>
+                            </h4>
+                            <div class="project-description">
+                                <p>An imaginary programming contest made during college.
+                                    Users can register for the contest,
+                                    an administration page exists where admins can add participants and news.
+                                </p>
+                            </div>
+                            <ul class="project-tools">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>PHP</li>
+                                <li>MySQL</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" rel="noreferrer" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" rel="noreferrer" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section id="about" class="about-section">
-                <div class="about-div">
-                    <h1 class="about-title">About me</h1>
+                <div class="about-container">
+                    <h2 class="about-title">About me</h2>
                     <img loading="lazy" class="about-img" src="assets/avatar.jpg" alt="avatar.jpg">
                     <p>Hi! My name is Mihai and I am a web developer recently relocated in Germany. </p>
                     <p>I am a responsible and ambitious person, devoted
@@ -86,7 +177,8 @@
                     <p>In my free time I like to go out, play video games, watch TV series or anime, and travel.</p>
 
                     <div class="media-btns-div">
-                        <button class="btn-glitch resume-btn" onclick="window.location.href='assets/CVMihaiTuta.pdf'">
+                        <button class="btn-glitch resume-btn"
+                                onclick="window.location.href='assets/CVMihaiTuta.pdf'">
                             Resume
                         </button>
                         <a class="linkedin-btn media-btns" href="https://www.linkedin.com/in/mihai-tuta/"
@@ -99,8 +191,6 @@
                             <i class="fab fa-github"></i>
                         </a>
                     </div>
-
-
                 </div>
             </section>
 
@@ -117,8 +207,8 @@
                         async
                 ></script>
 
-                <div class="contact-div">
-                    <h1 class="contact-title">Contact Me</h1>
+                <div class="contact-container">
+                    <h2 class="contact-title">Contact Me</h2>
 
                     <a class="contact-mail" href="mailto:tutamihai@gmail.com" rel="noreferrer" target="_blank">
                         <p>tutamihai@gmail.com</p>
