@@ -4,8 +4,12 @@
 :root {
     --clr-green-300: hsl(153, 79%, 56%);
     --clr-green-500: hsl(153, 48%, 49%);
+
     --clr-black-300: hsl(0, 2%, 10%);
     --clr-black-500: hsl(0, 0%, 7%);
+
+    --clr-white-300: hsl(0, 0%, 98%);
+    --clr-white-500: hsl(0, 0%, 75%);
 }
 
 html {
@@ -55,7 +59,7 @@ html {
  ========================================== */
 
 body {
-    color: white;
+    color: var(--clr-white-500);
     font-family: "Cyber", sans-serif;
     overflow-x: hidden;
 }
@@ -65,10 +69,12 @@ body {
 }
 
 h1 {
+    color: var(--clr-white-300);
     font-size: 2em;
 }
 
 h2 {
+    color: var(--clr-white-300);
     font-size: 2rem;
     text-align: center;
 }
@@ -98,7 +104,6 @@ section {
 .hero-section {
     height: 100vh;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(115, 113, 113, 0.2)), url('assets/bg1.jpg');
-    color: white;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -152,62 +157,89 @@ section {
 }
 
 .about-img {
-    max-width: 16em;
+    max-width: 20em;
     margin-bottom: 1.5em;
     border-radius: 50%;
 }
 
 .about-container p {
     /*text-align: justify;*/
+    color: var(--clr-white-300);
     font-weight: normal;
     font-size: 1.2em;
     margin-bottom: 0.5em;
+}
+
+.skills-title {
+    color: var(--clr-white-300);
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.4em;
+}
+
+.skills img {
+    margin-bottom: 0.4rem;
+    margin-right: 0.4rem;
 }
 
 .media-btns-div {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 0.4rem 0;
+    margin: 0.6rem 0;
 }
 
 .media-btns {
     background: var(--clr-green-500);
-    padding: 0.45rem 1.5rem;
+    padding: 0.5rem 10%;
     text-decoration: none;
-    color: white;
-    /*clip-path: polygon(0 0, 85% 0, 100% 30%, 100% 100%, 15% 100%, 0 70%);*/
+    color: var(--clr-white-300);
     transition: 0.3s;
     font-size: 1.3em;
+    background: linear-gradient(45deg, transparent 7%, var(--clr-green-500) 5%);
+}
+
+.resume-btn {
+    align-self: center;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 .github-btn {
-    background: linear-gradient(45deg, transparent 7%, hsl(0, 0%, 4%) 5%);
+    background: linear-gradient(45deg, transparent 7%, hsl(0, 0%, 0%) 5%);
 }
 
 .linkedin-btn {
     background: linear-gradient(45deg, transparent 7%, hsl(210, 90%, 40%) 5%);
 }
 
+/*
 .resume-btn {
     color: white;
     width: 5rem;
 }
+*/
 
 /* ------------ PROJECTS SECTION ------------ */
 
 .projects-title {
-    margin-bottom: 1rem;
+    /*margin-bottom: 1rem;*/
 }
 
 .project {
     background-color: var(--clr-black-300);
     padding: 1.5em;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
     border-radius: 0.2rem;
-    box-shadow: 8px 8px 15px -8px rgba(0,0,0,0.7);
-    -webkit-box-shadow: 8px 8px 15px -8px rgba(0,0,0,0.7);
-    -moz-box-shadow: 8px 8px 15px -8px rgba(0,0,0,0.7);
+    overflow: hidden;
+    box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
 }
 
 .project-title {
@@ -228,7 +260,6 @@ section {
     margin: 1em 0;
     font-size: 1em;
     font-weight: 200;
-
 }
 
 .project-tools li {
@@ -236,6 +267,7 @@ section {
 }
 
 .project-links {
+    color: var(--clr-green-500);
     display: flex;
     justify-content: flex-end;
 }
@@ -244,9 +276,15 @@ section {
     margin-top: 0.5em;
     font-size: 1.5em;
     margin-left: 1.5rem;
+    transition: 0.3s;
+}
+
+.project-links a:hover {
+    color: var(--clr-green-300);
 }
 
 .project-img {
+
 }
 
 .project-img img {
@@ -330,10 +368,10 @@ section {
 .contact-container {
     background: hsl(0, 2%, 10%);
     padding: 2.5em 2em;
-    margin: 10%;
-    box-shadow: 8px 8px 15px -8px rgba(0,0,0,0.7);
-    -webkit-box-shadow: 8px 8px 15px -8px rgba(0,0,0,0.7);
-    -moz-box-shadow: 8px 8px 15px -8px rgba(0,0,0,0.7);
+    margin: 1.2em 2em;
+    box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
 }
 
 /*@media (max-width: 800px) {
@@ -353,15 +391,13 @@ section {
 
 .contact-title {
     margin-bottom: 0.6em;
-    color: white;
 }
 
 .contact-mail {
     text-decoration: none;
-    color: white;
     width: 100%;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 .contact-mail p {
@@ -377,7 +413,7 @@ section {
     background: hsl(0, 0%, 15%);
     border-width: 0 0 0.3em;
     outline: 0;
-    color: white;
+    color: var(--clr-white-300);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4px), calc(100% - 2px) calc(100% - 2px), 102px calc(100% - 2px), 100px 100%, 4px 100%, 0 calc(100% - 4px));
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4px), calc(100% - 2px) calc(100% - 2px), 102px calc(100% - 2px), 100px 100%, 4px 100%, 0 calc(100% - 4px));
 }
@@ -497,7 +533,7 @@ section {
 
 .nav-links {
     text-decoration: none;
-    color: white;
+    color: var(--clr-white-300)
 }
 
 .nav-links:hover {
@@ -515,7 +551,7 @@ section {
 .burger-btn div {
     width: 2rem;
     height: 0.2rem;
-    background: white;
+    background: var(--clr-white-300);
     margin: 0.4rem;
     transition: all 0.3s ease;
 }
@@ -552,6 +588,7 @@ section {
     position: absolute;
     inset: 0;
     backdrop-filter: blur(0.3rem) brightness(0.8);
+    -webkit-backdrop-filter: blur(0.3rem) brightness(0.8);
 }
 
 .nav-media-btns {
@@ -562,7 +599,7 @@ section {
 .nav-media-btns a {
     padding: 0 0.4em;
     text-decoration: none;
-    color: white;
+    color: var(--clr-white-300);
 }
 
 /* ------------- BUTTONS ------------- */
@@ -662,7 +699,7 @@ section {
     border: none;
     outline: none;
     background-color: var(--clr-green-500);
-    color: white;
+    color: var(--clr-white-300);
     cursor: pointer;
     height: 2.5em;
     width: 2.5em;
@@ -673,6 +710,10 @@ section {
     transform: scale(0) rotate(-90deg);
 }
 
+.scrollBtn:hover {
+    background-color: var(--clr-green-300);
+}
+
 .fadeIn {
     visibility: visible;
     transform: scale(1) rotate(0deg);
@@ -681,4 +722,40 @@ section {
 .fadeOut {
     visibility: hidden;
     transform: scale(0) rotate(-90deg);
+}
+
+/* ===========================================
+                 MEDIA QUERYS
+ ========================================== */
+
+
+/* ------------- TABLETS ------------- */
+@media screen and (min-width: 481px) {
+    section {
+        background-color: red;
+    }
+}
+
+/* ------------- LAPTOPS/TABLETS ------------- */
+@media only screen and (min-width: 769px) {
+    section {
+        background-color: green;
+    }
+}
+
+
+/* ------------- LAPTOPS/DESKTOPS ------------- */
+/*@media only screen and (min-width: 992px) {*/
+@media only screen and (min-width: 1025px) {
+    section {
+        background-color: orange;
+    }
+}
+
+
+/* ------------- DESKTOPS ------------- */
+@media screen and (min-width: 1201px) {
+    section {
+        background-color: hotpink;
+    }
 }
