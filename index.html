@@ -196,7 +196,8 @@
                     <p>I am a responsible and ambitious person, devoted
                         and passionate about technology and
                         development, able to work in a team and I like to learn new things.</p>
-                    <p>In my free time I like to go out, play video games, watch TV series or anime, and travel.</p>
+                    <p>When I am not coding or learning I like to go out, play video games, watch TV series or anime,
+                        and travel.</p>
 
                     <div class="media-btns-div">
                         <a class="linkedin-btn media-btns" href="https://www.linkedin.com/in/mihai-tuta/"
@@ -234,13 +235,15 @@
                         <p>tutamihai@gmail.com</p>
                     </a>
 
-                    <form class="contact-form" action="">
-                        <input class="contact-name form-elements" type="text" placeholder="Your Name *">
+                    <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true"
+                          class="contact-form" action="">
+                        <input class="contact-name form-elements" name="name" type="text" placeholder="Your Name *">
                         <div class="line"></div>
-                        <input class="contact-email form-elements" type="text" placeholder="Your Email *">
-                        <textarea class="contact-message form-elements" name="textArea" id="" rows="10"
+                        <input class="contact-email form-elements" name="email" type="text" placeholder="Your Email *">
+                        <textarea class="contact-message form-elements" name="message" id="" rows="10"
                                   placeholder="Message *"></textarea>
-                        <button class="btn-glitch form-button">SEND</button>
+                        <div data-netlify-recaptcha="true"></div>
+                        <button class="btn-glitch form-button" type="submit">SEND</button>
                     </form>
                 </div>
 
