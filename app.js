@@ -1,11 +1,14 @@
-const responsiveBurgerMenu = () => {
-    const burgerBtn = document.querySelector('.burger-btn')
-    const nav = document.querySelector('.nav-list')
-    const navButtons = document.querySelectorAll('.nav-list li')
-    const content = document.querySelector('#content')
-    const navLinks = document.querySelectorAll('.nav-links')
-    const body = document.querySelector('body')
+const burgerBtn = document.querySelector('.burger-btn')
+const nav = document.querySelector('.nav-list')
+const navButtons = document.querySelectorAll('.nav-list li')
+const content = document.querySelector('#content')
+const navLinks = document.querySelectorAll('.nav-links')
+const body = document.querySelector('body')
 
+const scrollBtn = document.querySelector('.scrollBtn');
+
+
+const responsiveBurgerMenu = () => {
     // Toggle nav bar
     burgerBtn.addEventListener('click', (e) => {
 
@@ -39,7 +42,7 @@ const responsiveBurgerMenu = () => {
     })
 
     // Close navbar when clicked outside
-    document.addEventListener('click', function (e) {
+    document.addEventListener('click', (e) => {
         if (!e.target.classList.contains('nav-list') && nav.classList.contains('nav-active')) {
             nav.classList.remove('nav-active')
             content.classList.remove('blur')
@@ -51,8 +54,6 @@ const responsiveBurgerMenu = () => {
         }
     });
 }
-
-const scrollBtn = document.querySelector('.scrollBtn');
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {

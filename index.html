@@ -16,22 +16,24 @@
 
     <body>
         <nav class="nav-bar">
-            <h1 class="logo">Mihai<span> Tuță</span></h1>
+            <a href="#">
+                <h1 class="logo">Mihai<span> Tuță</span></h1>
+            </a>
             <ul class="nav-list">
                 <li><a class="nav-links" href="#">HOME</a></li>
                 <li><a class="nav-links" href="#projects">PROJECTS</a></li>
                 <li><a class="nav-links" href="#about">ABOUT ME</a></li>
                 <li><a class="nav-links" href="#about">SKILLS</a></li>
                 <li><a class="nav-links" href="#contact">CONTACT</a></li>
-                <li class="nav-media-btns">
-                    <a href="mailto:tutamihai@gmail.com" rel="noreferrer" target="_blank">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+                <li class="nav-links nav-media-btns">
                     <a href="https://www.linkedin.com/in/mihai-tuta/" rel="noreferrer" target="_blank">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                     <a href="https://github.com/tutamihai" rel="noreferrer" target="_blank">
                         <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:tutamihai@gmail.com" rel="noreferrer" target="_blank">
+                        <i class="fas fa-envelope"></i>
                     </a>
                 </li>
 
@@ -221,13 +223,6 @@
 
             <section id="contact" class="contact-section">
 
-                <div id="map"></div>
-
-                <script
-                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9J7TMvE3hvxUdrKBJI-14Cz5MFDIpBNU&callback=initGoogleMap"
-                        async
-                ></script>
-
                 <div class="contact-container">
                     <h2 class="contact-title">Contact Me</h2>
 
@@ -246,6 +241,13 @@
                         <button class="btn-glitch form-button" type="submit">SEND</button>
                     </form>
                 </div>
+
+                <div id="map"></div>
+
+                <script
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9J7TMvE3hvxUdrKBJI-14Cz5MFDIpBNU&callback=initGoogleMap"
+                        async
+                ></script>
 
             </section>
 

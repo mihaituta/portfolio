@@ -227,10 +227,6 @@ section {
 
 /* ------------ PROJECTS SECTION ------------ */
 
-.projects-title {
-    /*margin-bottom: 1rem;*/
-}
-
 .project {
     background-color: var(--clr-black-300);
     padding: 1.5em;
@@ -247,6 +243,14 @@ section {
     color: var(--clr-green-500);
     font-size: 1.4rem;
     margin: 0.8em 0;
+}
+
+.project-title a {
+    transition: 0.3s;
+}
+
+.project-title a:hover {
+    color: var(--clr-green-300);;
 }
 
 .project-description {
@@ -337,19 +341,11 @@ section {
 
 /* ------------ CONTACT SECTION ------------ */
 
-/*
-.contact-section {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-*/
-
 .contact-section {
     padding: 0;
     display: flex;
-    flex-flow: column-reverse;
+    flex-flow: column;
+    align-items: center;
 }
 
 #map {
@@ -357,15 +353,9 @@ section {
     width: 100%;
 }
 
-/*.contact-div {
-    background: hsl(0, 2%, 10%);
-    width: 20%;
-    padding: 2.5em 5em;
-    position: absolute;
-    !*z-index: 2;*!
-}*/
-
 .contact-container {
+    width: 85%;
+    max-width: 25em;
     background: hsl(0, 2%, 10%);
     padding: 2.5em 2em;
     margin: 1.2em 2em;
@@ -373,14 +363,6 @@ section {
     -webkit-box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
     -moz-box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
 }
-
-/*@media (max-width: 800px) {
-    .contact-section {
-        justify-content: center;
-    }
-    .contact-div {
-    }
-}*/
 
 .contact-form {
     display: flex;
@@ -459,10 +441,6 @@ section {
     align-items: center;
     min-height: 10vh;
     position: fixed;
-    /*   padding-top: 10px;
-       padding-right: 30px;
-       padding-left: 40px;
-       position: fixed;*/
     z-index: 99;
     width: 100%;
 }
@@ -495,37 +473,6 @@ section {
     transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-/*
-@media (max-width: 700px) {
-    .nav-bar {
-        flex-flow: column;
-    }
-
-    .nav-list {
-        flex-flow: column;
-    }
-}
-*/
-
-@media screen and (max-width: 768px) {
-    /*  .nav-list {
-          display: flex;
-          list-style-type: none;
-          justify-content: space-between;
-          font-size: 0.7em;
-      }*/
-}
-
-/*.nav-links {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    text-decoration: none;
-    transition: 0.3s;
-    color: white;
-    padding: 0 0.5em;
-}*/
-
 .nav-list li {
     margin: 0.6em 0;
     opacity: 0;
@@ -536,7 +483,11 @@ section {
     color: var(--clr-white-300)
 }
 
-.nav-links:hover {
+.nav-bar a {
+    transition: all 0.3s;
+}
+
+.nav-bar a:hover {
     cursor: pointer;
     color: var(--clr-green-300);
 }
@@ -734,6 +685,13 @@ section {
     section {
         background-color: red;
     }
+
+    .contact-section {
+        align-items: center;
+    }
+
+    .contact-container {
+    }
 }
 
 /* ------------- LAPTOPS/TABLETS ------------- */
@@ -741,8 +699,63 @@ section {
     section {
         background-color: green;
     }
-}
 
+    /* ------------ NAVIGATION ---------------*/
+    .burger-btn {
+        display: none;
+    }
+
+    .nav-bar {
+        padding: 0 1.8rem;
+        min-height: 5rem;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        position: static;
+        background-color: transparent;
+        height: auto;
+        width: auto;
+        padding: 0;
+        font-size: 1.5em;
+        transform: translateX(0px);
+    }
+
+    .nav-list li {
+        margin: 0;
+        opacity: 1;
+    }
+
+    .nav-links {
+        padding-left: 0.8em;
+    }
+
+    .nav-media-btns {
+        display: none;
+    }
+
+    .active-link {
+        color: var(--clr-green-500)
+    }
+
+    /* ------------ Contact ---------------*/
+    .contact-section {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .contact-container {
+        width: 85%;
+        max-width: 20em;
+        position: absolute;
+        z-index: 1;
+    }
+}
 
 /* ------------- LAPTOPS/DESKTOPS ------------- */
 /*@media only screen and (min-width: 992px) {*/
@@ -751,7 +764,6 @@ section {
         background-color: orange;
     }
 }
-
 
 /* ------------- DESKTOPS ------------- */
 @media screen and (min-width: 1201px) {
