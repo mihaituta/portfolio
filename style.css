@@ -74,8 +74,8 @@ h1 {
 }
 
 h2 {
-    color: var(--clr-white-300);
-    font-size: 2rem;
+    color: var(--clr-green-500);
+    font-size: clamp(2rem, 5vw, 3rem);
     text-align: center;
 }
 
@@ -94,8 +94,7 @@ a {
  ========================================== */
 
 section {
-    min-height: 200px;
-    padding: 1.2em 2em;
+    padding: 1.2rem 2rem;
     background: var(--clr-black-500);
 }
 
@@ -111,7 +110,7 @@ section {
 
 .hero-container {
     font-family: "Oxanium", sans-serif;
-    padding: 2em;
+    padding: 2em 0;
     height: 100%;
     display: flex;
     flex-flow: column;
@@ -119,12 +118,12 @@ section {
     align-content: center;
 }
 
-.hero-name {
-    font-size: 1.7em;
-}
+/*.hero-name {
+    font-size: 2rem;
+}*/
 
 .hero-container h1 {
-    font-size: 1.7em;
+    font-size: clamp(1.6em, 5vw, 3.5em);
 }
 
 .hero-container span {
@@ -170,23 +169,6 @@ section {
     margin-bottom: 0.5em;
 }
 
-.skills-title {
-    color: var(--clr-white-300);
-    align-self: flex-start;
-    margin-bottom: 0.5rem;
-}
-
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 0.4em;
-}
-
-.skills img {
-    margin-bottom: 0.3rem;
-    margin-right: 0.3rem;
-}
-
 .media-btns-div {
     width: 100%;
     display: flex;
@@ -196,7 +178,7 @@ section {
 
 .media-btns {
     background: var(--clr-green-500);
-    padding: 0.5rem 10%;
+    padding: 0.5rem 2rem;
     text-decoration: none;
     color: var(--clr-white-300);
     transition: 0.3s;
@@ -205,6 +187,7 @@ section {
 }
 
 .resume-btn {
+    padding: 0.5rem 0.8rem;
     align-self: center;
     font-weight: bold;
     font-size: 1.1em;
@@ -224,6 +207,77 @@ section {
     width: 5rem;
 }
 */
+
+/* ------------ SKILLS SECTION ------------ */
+.skills-container {
+    margin-top: 2rem;
+}
+
+.skills-title {
+    margin-bottom: 1em;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(10px, 1fr));
+    grid-row-gap: 2em;
+}
+
+.skill {
+    color: var(--clr-white-300);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.skill i {
+    font-size: 4rem;
+}
+
+.skill-title {
+    margin-bottom: 0.5em;
+}
+
+.html i {
+    color: #f16529
+}
+
+.css i {
+    color: #2965f1;
+}
+
+.js i {
+    color: #f0db4f;
+}
+
+.vue i {
+    color: var(--clr-green-300);
+}
+
+.node i {
+    color: #71B156;
+}
+
+.mongo i {
+    color: #12964D;
+}
+
+.git i {
+    color: #f1502f;
+}
+
+.github i {
+    color: var(--clr-white-500);
+}
+
+.npm i {
+    color: #cc3534;
+}
+
+.responsive i {
+    color: #bb89f3;
+}
 
 /* ------------ PROJECTS SECTION ------------ */
 
@@ -349,6 +403,7 @@ section {
 }
 
 #map {
+    margin-top: 1.2rem;
     min-height: 100vh;
     width: 100%;
 }
@@ -417,7 +472,7 @@ section {
     font-family: 'Cyber', sans-serif;
 }
 
-.form-button {
+.contact-button {
     color: var(--clr-black-300);
     margin-top: 1.5em;
     width: 100%;
@@ -470,7 +525,7 @@ section {
     width: 60%;
     font-size: 1.9em;
     transform: translateX(100%);
-    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .nav-list li {
@@ -484,7 +539,7 @@ section {
 }
 
 .nav-bar a {
-    transition: all 0.3s;
+    transition: 0.3s;
 }
 
 .nav-bar a:hover {
@@ -504,7 +559,7 @@ section {
     height: 0.2rem;
     background: var(--clr-white-300);
     margin: 0.4rem;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .nav-active {
@@ -684,6 +739,7 @@ section {
 @media screen and (min-width: 481px) {
     section {
         background-color: red;
+        padding: 1.2rem 3rem;
     }
 
     .contact-section {
@@ -692,12 +748,20 @@ section {
 
     .contact-container {
     }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(100px, 1fr));
+        grid-row-gap: 1.5em;
+    }
+
 }
 
 /* ------------- LAPTOPS/TABLETS ------------- */
 @media only screen and (min-width: 769px) {
     section {
         background-color: green;
+        padding: 1.2rem 5rem;
     }
 
     /* ------------ NAVIGATION ---------------*/
@@ -751,9 +815,13 @@ section {
 
     .contact-container {
         width: 85%;
-        max-width: 20em;
+        max-width: 25em;
         position: absolute;
         z-index: 1;
+    }
+
+    .contact-button {
+        width: 10em;
     }
 }
 
@@ -762,12 +830,88 @@ section {
 @media only screen and (min-width: 1025px) {
     section {
         background-color: orange;
+        padding: 1.2rem 8rem;
+    }
+
+    /* ------------ SKILLS ----------------*/
+    .skill i {
+        font-size: 5rem;
+    }
+
+    /* ------------ Contact ---------------*/
+    .contact-container {
+        max-width: 30rem;
     }
 }
 
-/* ------------- DESKTOPS ------------- */
+/* ---------------- DESKTOPS ----------------- */
 @media screen and (min-width: 1201px) {
     section {
         background-color: hotpink;
+        padding: 1.2rem 8rem;
+    }
+
+    /* -------------- ABOUT ---------------*/
+    .about-section {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+
+    }
+
+    /* ------------- SKILLS --------------*/
+    .skills-container {
+        margin-top: 0;
+    }
+
+    .skill i {
+        font-size: 5rem;
+    }
+
+    .skill-title {
+        font-size: 1.6em;
+    }
+
+    /* ------------- Contact -------------*/
+    .contact-container {
+        margin-right: 10rem;
+    }
+
+}
+
+/* ------------- BIG DESKTOPS ------------- */
+@media screen and (min-width: 1801px) {
+    section {
+        background: var(--clr-black-500);
+        padding: 1.2rem 10rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .nav-bar {
+        padding: 0 3rem;
+        min-height: 11vh;
+    }
+
+    .nav-list {
+        font-size: 1.6rem;
+    }
+
+    .contact-container p {
+        font-size: 1.2rem;
+    }
+
+    .form-elements {
+        font-size: 1.2rem;
+    }
+
+    .contact-button {
+        font-size: 1.1rem;
     }
 }
