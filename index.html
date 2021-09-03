@@ -46,13 +46,13 @@
         </nav>
 
         <div id="content">
-            <section id="hero" class="hero-section">
+            <section id="hero" class="hero-section" title="Hero">
 
                 <div class="hero-container">
                     <h1 class="hero-name">Hi, I'm Mihai Tuță</h1>
                     <h1>I'm a <span>web developer</span></h1>
-                    <button onclick="window.location.href='#projects'" class="btn-glitch hero-btn">
-                        Projects
+                    <button onclick="window.location.href='#projects'" class="btn hero-btn">
+                        PROJECTS
                     </button>
                 </div>
 
@@ -60,12 +60,12 @@
 
             <section id="projects" class="projects-section">
                 <div class="projects-container">
-                    <h2 class="projects-title">Projects</h2>
+                    <h2 class="projects-title">PROJECTS</h2>
 
                     <div class="project">
                         <div class="project-img">
                             <a href="#" rel="noreferrer" target="_blank">
-                                <img src="assets/InfinityFoodPreview.png" alt="IF.png"/>
+                                <img loading="lazy" src="assets/InfinityFoodPreview.png" alt="IF.png"/>
                             </a>
                         </div>
                         <div class="project-content">
@@ -101,7 +101,7 @@
 
                     <div class="project">
                         <div class="project-img">
-                            <img src="assets/infinityCodePreview.png" alt="icO.png"/>
+                            <img loading="lazy" src="assets/infinityCodePreview.png" alt="icO.png"/>
                         </div>
                         <div class="project-content">
                             <!--                            <div class="project-label">Above project title</div>-->
@@ -124,7 +124,7 @@
                     <div class="project">
                         <div class="project-img">
                             <a href="https://github.com/tutamihai/SDL-Space-game" rel="noreferrer" target="_blank">
-                                <img src="assets/SpaceGamePreview.png" alt="SG.png"/>
+                                <img loading="lazy" src="assets/SpaceGamePreview.png" alt="SG.png"/>
                             </a>
                         </div>
                         <div class="project-content">
@@ -151,7 +151,7 @@
 
                     <div class="project">
                         <div class="project-img">
-                            <img src="assets/QuizPreview.png" alt="SG.png"/>
+                            <img loading="lazy" src="assets/QuizPreview.png" alt="SG.png"/>
                         </div>
                         <div class="project-content">
                             <!--                            <div class="project-label">Above project title</div>-->
@@ -172,34 +172,9 @@
                 </div>
             </section>
 
-            <section id="about" class="about-section">
-                <div class="about-container">
-                    <h2 class="about-title">About me</h2>
-                    <img loading="lazy" class="about-img" src="assets/avatar.jpg" alt="avatar.jpg">
-
-                    <p>Hi! My name is Mihai and I am a web developer recently relocated in Germany. </p>
-                    <p>I am a responsible and ambitious person, devoted
-                        and passionate about technology and
-                        development, able to work in a team and I always like to learn new things.</p>
-                    <p>When I am not coding or learning I like to go out, play video games, watch TV series or anime,
-                        and travel.</p>
-
-                    <div class="media-btns-div">
-                        <a class="linkedin-btn media-btns" href="https://www.linkedin.com/in/mihai-tuta/"
-                           rel="noreferrer" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a class="github-btn media-btns" href="https://github.com/tutamihai" rel="noreferrer"
-                           target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a class="resume-btn media-btns" href="assets/CVMihaiTuta.pdf" rel="noreferrer" target="_blank">
-                            RESUME
-                        </a>
-                    </div>
-                </div>
+            <section class="about-section">
                 <div id="skills" class="skills-container">
-                    <h2 class="skills-title">What I work with</h2>
+                    <h2 class="skills-title">SKILLS</h2>
                     <div class="skills-grid">
                         <div class="skill html">
                             <h3 class="skill-title">HTML5</h3>
@@ -219,8 +194,11 @@
                         </div>
                         <div class="skill node">
                             <h3 class="skill-title">Node</h3>
-                            <!--                            <i class="fab fa-node-js"></i>-->
                             <i class="fab fa-node"></i>
+                        </div>
+                        <div class="skill express">
+                            <h3 class="skill-title">Express</h3>
+                            <i class="fab fa-js"></i>
                         </div>
                         <div class="skill mongo">
                             <h3 class="skill-title">MongoDB</h3>
@@ -247,16 +225,45 @@
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <!--<section id="skills">
-                <h1>Skills</h1>
-            </section>-->
+                <div id="about" class="about-container">
+                    <h2 class="about-title">ABOUT ME</h2>
+                    <div class="about-content">
+                        <img loading="lazy" class="about-img" src="assets/avatarWeb21.jpg" alt="avatar.jpg">
+
+                        <div class="about-description">
+                            <p>Hi! My name is Mihai and I am a web developer recently relocated in Germany. </p>
+                            <p>I am a responsible and ambitious person, devoted
+                                and passionate about technology and
+                                development, able to work in a team and I always like to learn new things.</p>
+                            <p> When I am not coding or learning I like to go out, play video games, watch TV series or
+                                anime,
+                                and travel.</p>
+
+                            <div class="media-btns-div">
+                                <a class="linkedin-btn media-btns" href="https://www.linkedin.com/in/mihai-tuta/"
+                                   rel="noreferrer" target="_blank">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a class="github-btn media-btns" href="https://github.com/tutamihai" rel="noreferrer"
+                                   target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a class="resume-btn media-btns" href="assets/CVMihaiTuta.pdf" rel="noreferrer"
+                                   target="_blank">
+                                    RESUME
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
 
             <section id="contact" class="contact-section">
 
                 <div class="contact-container">
-                    <h2 class="contact-title">Contact Me</h2>
+                    <h2 class="contact-title">CONTACT ME</h2>
 
                     <a class="contact-mail" href="mailto:tutamihai@gmail.com" rel="noreferrer" target="_blank">
                         <p>tutamihai@gmail.com</p>
@@ -269,8 +276,7 @@
                         <input class="contact-email form-elements" name="email" type="text" placeholder="Your Email *">
                         <textarea class="contact-message form-elements" name="message" id="" rows="10"
                                   placeholder="Message *"></textarea>
-                        <div data-netlify-recaptcha="true"></div>
-                        <button class="btn-glitch contact-button" type="submit">SEND</button>
+                        <button class="btn contact-button" type="submit">SEND</button>
                     </form>
                 </div>
 
