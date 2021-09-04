@@ -305,8 +305,8 @@ section {
 .project-title {
     font-weight: bold;
     color: var(--clr-green-500);
-    font-size: 1.4rem;
-    margin: 0.8em 0;
+    font-size: 1.6rem;
+    margin: 0.5em 0;
 }
 
 .project-title a {
@@ -359,50 +359,6 @@ section {
     width: 100%;
 }
 
-
-/*.projects {
-    height: auto;
-}
-
-.project {
-    display: flex;
-    flex-flow: column;
-    margin-left: 50%;
-}
-
-.project-content {
-    display: block;
-    padding-left: 120px;
-    font-size: 3em;
-    position: fixed;
-    top: 40vh;
-    color: white;
-    width: 40%;
-    height: 200px;
-    font-family: 'Cyber', sans-serif;
-}
-
-.project-content ul {
-    font-size: 1em;
-    width: auto;
-    display: flex;
-    list-style: disc;
-}
-
-.project-content li {
-    list-style-position: inside;
-    padding-right: 40px;
-}
-
-.project-images {
-    height: 800px;
-    background: var(--clr-green-500);
-    color: white;
-    font-family: 'Cyber', sans-serif;
-    font-size: 50px;
-}*/
-
-
 /* ------------ CONTACT SECTION ------------ */
 
 .contact-section {
@@ -414,7 +370,7 @@ section {
 }
 
 #map {
-    min-height: 100vh;
+    height: 50rem;
     width: 100%;
 }
 
@@ -434,7 +390,6 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 80%;
 }
 
 .contact-title {
@@ -457,6 +412,7 @@ section {
     font-family: 'Cyber', sans-serif;
     margin: 0.8rem 0;
     padding: 0.7rem 1rem;
+    max-height: 100%;
     width: 100%;
     background: hsl(0, 0%, 15%);
     border-width: 0 0 0.3em;
@@ -753,6 +709,48 @@ section {
         color: var(--clr-green-500)
     }
 
+    /* ------------- PROJECTS -------------*/
+    /*.projects {
+    height: auto;
+}
+
+.project {
+    display: flex;
+    flex-flow: column;
+    margin-left: 50%;
+}
+
+.project-content {
+    display: block;
+    padding-left: 120px;
+    font-size: 3em;
+    position: fixed;
+    top: 40vh;
+    color: white;
+    width: 40%;
+    height: 200px;
+    font-family: 'Cyber', sans-serif;
+}
+
+.project-content ul {
+    font-size: 1em;
+    width: auto;
+    display: flex;
+    list-style: disc;
+}
+
+.project-content li {
+    list-style-position: inside;
+    padding-right: 40px;
+}
+
+.project-images {
+    height: 800px;
+    background: var(--clr-green-500);
+    color: white;
+    font-family: 'Cyber', sans-serif;
+    font-size: 50px;
+}*/
     /* -------------- ABOUT ---------------*/
     .about-content {
         gap: 2rem;
