@@ -45,15 +45,25 @@
             </div>
         </nav>
 
-        <div id="content">
+        <main class="content">
             <section id="hero" class="hero-section" title="Hero">
 
                 <div class="hero-container">
-                    <h1 class="hero-name">Hi, I'm Mihai Tuță</h1>
+                    <h1>Hi, I'm Mihai Tuță</h1>
                     <h1>I'm a <span>web developer</span></h1>
-                    <button onclick="window.location.href='#projects'" class="btn hero-btn">
-                        PROJECTS
-                    </button>
+                    <div class="hero-btns-div">
+                        <a class="projects-btn media-btns hero-btns" href="#projects" rel="noreferrer">
+                            PROJECTS
+                        </a>
+                        <a class="linkedin-btn media-btns hero-btns" href="https://www.linkedin.com/in/mihai-tuta/"
+                           rel="noreferrer" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="github-btn media-btns hero-btns" href="https://github.com/tutamihai" rel="noreferrer"
+                           target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
 
             </section>
@@ -74,8 +84,8 @@
                             </h4>
                             <div class="project-description">
                                 <p>A web platform for presenting and managing restaurants with administration page where
-                                    admins can manage restaurants and users, and staff members that can
-                                    manage their restaurant, menus and orders.
+                                    admins can manage users and restaurants, and restaurant staff members can
+                                    manage their restaurant, menus, prices and orders.
                                 </p>
                             </div>
                             <ul class="project-tools">
@@ -102,13 +112,13 @@
 
                     <div class="project">
                         <div class="project-img">
-                            <img loading="lazy" src="assets/infinityCodePreview.png" alt="icO.png"/>
+                            <img loading="lazy" src="assets/infinityCodePreview1.png" alt="icO.png"/>
                         </div>
                         <div class="project-content">
                             <!--                            <div class="project-label">Above project title</div>-->
                             <h4 class="project-title">Infinity Code</h4>
                             <div class="project-description">
-                                <p>An imaginary programming contest made during college where users can register for the
+                                <p>An mockup programming contest made during college where users can register for the
                                     contest, and admins can add participants and news articles.
                                 </p>
                             </div>
@@ -134,7 +144,7 @@
                                                          rel="noreferrer" target="_blank">Space Game</a>
                             </h4>
                             <div class="project-description">
-                                <p>A space shooting game made during college.
+                                <p>A 2d space shooting game made during college.
                                     The objective of the game is to score as high as possible without dying.
                                 </p>
                             </div>
@@ -241,16 +251,19 @@
                                 anime,
                                 and travel.</p>
 
-                            <div class="media-btns-div">
-                                <a class="linkedin-btn media-btns" href="https://www.linkedin.com/in/mihai-tuta/"
+                            <div class="about-btns-div">
+                                <a class="linkedin-btn media-btns about-btns"
+                                   href="https://www.linkedin.com/in/mihai-tuta/"
                                    rel="noreferrer" target="_blank">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
-                                <a class="github-btn media-btns" href="https://github.com/tutamihai" rel="noreferrer"
+                                <a class="github-btn media-btns about-btns" href="https://github.com/tutamihai"
+                                   rel="noreferrer"
                                    target="_blank">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a class="resume-btn media-btns" href="assets/CVMihaiTuta.pdf" rel="noreferrer"
+                                <a class="resume-btn media-btns about-btns" href="assets/CVMihaiTuta.pdf"
+                                   rel="noreferrer"
                                    target="_blank">
                                     RESUME
                                 </a>
@@ -274,21 +287,21 @@
                         <input class="contact-email form-elements" name="email" type="text" placeholder="Your Email *">
                         <textarea class="contact-message form-elements" name="message" id="" rows="10"
                                   placeholder="Message *"></textarea>
-                        <button class="btn contact-button" type="submit">SEND</button>
+                        <button class="contact-button" type="submit">SEND</button>
                     </form>
                 </div>
 
                 <div id="map"></div>
 
-                <script
-                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9J7TMvE3hvxUdrKBJI-14Cz5MFDIpBNU&callback=initGoogleMap"
-                        async
-                ></script>
+                <!--  <script
+                          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9J7TMvE3hvxUdrKBJI-14Cz5MFDIpBNU&callback=initGoogleMap"
+                          async
+                  ></script>-->
 
             </section>
 
             <button onclick="scrollToTop()" class="scrollBtn"><i class="fas fa-chevron-up"></i></button>
-        </div>
+        </main>
         <script src="app.js"></script>
     </body>
 </html>

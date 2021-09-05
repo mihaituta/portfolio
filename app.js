@@ -1,7 +1,7 @@
 const burgerBtn = document.querySelector('.burger-btn')
 const nav = document.querySelector('.nav-list')
 const navButtons = document.querySelectorAll('.nav-list li')
-const content = document.querySelector('#content')
+const main = document.querySelector('main')
 const navLinks = document.querySelectorAll('.nav-links')
 const body = document.querySelector('body')
 
@@ -14,7 +14,7 @@ const responsiveBurgerMenu = () => {
 
         e.stopPropagation()
         nav.classList.toggle('nav-active')
-        content.classList.toggle('blur')
+        main.classList.toggle('blur')
         body.classList.toggle('overflow')
 
         // FadeIn navbar links
@@ -29,7 +29,7 @@ const responsiveBurgerMenu = () => {
         // Close navbar when a link is clicked
         navLinks.forEach(link => link.addEventListener("click", () => {
             nav.classList.remove('nav-active')
-            content.classList.remove('blur')
+            main.classList.remove('blur')
             burgerBtn.classList.remove('toggle');
             body.classList.remove('overflow');
             navButtons.forEach((button) => {
@@ -45,7 +45,7 @@ const responsiveBurgerMenu = () => {
     document.addEventListener('click', (e) => {
         if (!e.target.classList.contains('nav-list') && nav.classList.contains('nav-active')) {
             nav.classList.remove('nav-active')
-            content.classList.remove('blur')
+            main.classList.remove('blur')
             burgerBtn.classList.remove('toggle');
             body.classList.remove('overflow');
             navButtons.forEach((button) => {
