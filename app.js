@@ -76,4 +76,46 @@ function scrollToTop() {
     document.documentElement.scrollTop = 0;
 }
 
-responsiveBurgerMenu()
+const SuccessAlert = document.querySelector('.success-alert')
+const ErrorAlert = document.querySelector('.error-alert')
+const AlertCloseButtons = document.querySelectorAll('.close-btn');
+
+const showAlert = (alert) => {
+    alert.classList.remove('hide')
+    alert.classList.add('show')
+    alert.classList.add('showAlert')
+    setTimeout(() => {
+        alert.classList.add('hide')
+        alert.classList.remove('show')
+    }, 5000)
+}
+
+// Close alert when X button is clicked
+for (let i = 0; i < AlertCloseButtons.length; i++) {
+    AlertCloseButtons[i].addEventListener('click', () => {
+        if (SuccessAlert.classList.contains('show')) {
+            SuccessAlert.classList.add('hide')
+            SuccessAlert.classList.remove('show')
+        }
+        if (ErrorAlert.classList.contains('show')) {
+            ErrorAlert.classList.add('hide')
+            ErrorAlert.classList.remove('show')
+        }
+    });
+}
+
+// Use Ajax to display a success or error alert when the form is submitted
+const contactForm = document.querySelector('.contact-form')
+contactForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    const formData = new FormData(contactForm)
+    fetch('/', {
+        method: 'POST',
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+        body: new URLSearchParams(formData).toString()
+    }).then(() => {
+        showAlert(SuccessAlert)
+        //reset form inputs
+        
+    }).catch(() => showAlert(ErrorAlert))
+})

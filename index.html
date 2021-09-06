@@ -295,14 +295,28 @@
 
             <section id="contact" class="contact-section">
 
+                <div class="alert success-alert hide">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="alert-msg success-alert-msg">Message successfully sent!</span>
+                    <span class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </span>
+                </div>
+
+                <div class="alert error-alert hide">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span class="alert-msg error-alert-msg">Something went wrong!</span>
+                    <span class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </span>
+                </div>
+
                 <div class="contact-container">
                     <h2 class="contact-title">CONTACT ME</h2>
-
                     <a class="contact-mail" href="mailto:tutamihai@gmail.com" rel="noreferrer" target="_blank">
                         <p>tutamihai@gmail.com</p>
                     </a>
-
-                    <form name="contact" method="POST" data-netlify="true" class="contact-form" action="">
+                    <form name="contact" method="POST" data-netlify="true" class="contact-form" action="/#contact">
                         <input class="contact-name form-elements" name="name" type="text" placeholder="Your Name *">
                         <input class="contact-email form-elements" name="email" type="text" placeholder="Your Email *">
                         <textarea class="contact-message form-elements" name="message" id="" rows="10"
@@ -322,6 +336,7 @@
 
             <button onclick="scrollToTop()" class="scrollBtn"><i class="fas fa-chevron-up"></i></button>
         </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="app.js"></script>
     </body>
 </html>
