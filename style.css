@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&family=Nunito:wght@200;400;700&family=Open+Sans:wght@300;400;700&family=Ubuntu:wght@300;500;700&display=swap');
+
 /* ===========================================
                  GLOBAL STYLES
  ========================================== */
@@ -5,10 +7,12 @@
     --clr-green-300: hsl(153, 100%, 60%);
     --clr-green-500: hsl(153, 48%, 49%);
 
-    --clr-black-300: hsl(0, 2%, 10%);
+    --clr-black-200: hsl(0, 0%, 15%);
+    --clr-black-300: hsl(0, 0%, 13%);
+    --clr-black-400: hsl(0, 0%, 10%);
     --clr-black-500: hsl(0, 0%, 7%);
 
-    --clr-white-300: hsl(0, 0%, 98%);
+    --clr-white-300: hsl(0, 0%, 97%);
     --clr-white-500: hsl(0, 0%, 75%);
 
     --max-width: 1920px;
@@ -61,7 +65,7 @@ html {
 
 body {
     color: var(--clr-white-500);
-    font-family: "Cyber", sans-serif;
+    font-family: 'Nunito', sans-serif;
     overflow-x: hidden;
     background-color: var(--clr-black-500);
 }
@@ -78,6 +82,7 @@ h2 {
     color: var(--clr-green-500);
     font-size: clamp(2rem, 5vw, 2.5rem);
     text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 ul {
@@ -99,11 +104,16 @@ main {
 }
 
 section {
-    padding: 1.2rem 2rem;
+    padding: 2rem 2rem;
     background: var(--clr-black-500);
 }
 
-/* ------------ HOME SECTION ------------ */
+.projects-section,
+.about-section {
+    margin-bottom: 3rem;
+}
+
+/* ------------ HERO SECTION ------------ */
 
 .hero-section {
     height: 100vh;
@@ -114,11 +124,11 @@ section {
 }
 
 .hero-container h1 {
-    font-size: clamp(1.68em, 7vw, 3.5em);
+    line-height: 1.1;
+    font-size: clamp(1.7em, 5vw, 5em);
 }
 
 .hero-container {
-    font-family: "Oxanium", sans-serif;
     padding: 2em 0;
     height: 100%;
     display: flex;
@@ -127,7 +137,7 @@ section {
     align-content: center;
 }
 
-.hero-container span {
+span {
     color: var(--clr-green-500);
 }
 
@@ -157,11 +167,11 @@ section {
 }
 
 .projects-btn {
+    border-radius: 0.2rem;
     padding: 0.6em 1.5em;
     align-self: center;
     font-weight: bold;
     font-size: clamp(1em, 3vw, 1.2em);
-
     background: var(--clr-green-500);
     transition: 0.3s;
     color: var(--clr-black-500);
@@ -170,6 +180,82 @@ section {
 .projects-btn:hover, .resume-btn:hover {
     color: var(--clr-black-300);
     background: var(--clr-green-300);
+}
+
+/* ------------ PROJECTS SECTION ------------ */
+
+.project {
+    background-color: var(--clr-black-300);
+    padding: 1.5em;
+    margin-top: 2rem;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
+}
+
+.project-img img {
+    width: 100%;
+    height: auto;
+}
+
+.project-title {
+    font-weight: bold;
+    color: var(--clr-green-500);
+    font-size: clamp(1.6rem, 4vw, 2rem);
+    margin: 0.5em 0;
+}
+
+.project-title a {
+    transition: 0.3s;
+}
+
+.project-title a:hover {
+    color: var(--clr-green-300);;
+}
+
+.project-description {
+    letter-spacing: 0.05rem;
+    font-weight: normal;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+}
+
+.project-more-btn {
+    color: var(--clr-green-500);
+    transition: 0.3s;
+}
+
+.project-more-btn:hover {
+    color: var(--clr-green-300);
+}
+
+.project-tools {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em 0;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.project-tools li {
+    margin-right: 0.8em;
+}
+
+.project-links {
+    color: var(--clr-green-500);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.project-links a {
+    margin-top: 0.2rem;
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
+    margin-left: 1.5rem;
+    transition: 0.3s;
+}
+
+.project-links a:hover {
+    color: var(--clr-green-300);
 }
 
 /* ------------ ABOUT SECTION ------------ */
@@ -189,9 +275,9 @@ section {
     align-items: center;
 }
 
-.about-title {
+/*.about-title {
     margin-bottom: 0.5em;
-}
+}*/
 
 .about-img {
     width: 100%;
@@ -222,10 +308,11 @@ section {
 }
 
 .resume-btn {
-    padding: 0.3em 0.8em;
+    padding: 0.4em 1em;
     align-self: center;
     font-weight: bold;
-    font-size: 1.4em;
+    font-size: clamp(1em, 3vw, 1.2em);
+    border-radius: 0.2rem;
     background: var(--clr-green-500);
     transition: 0.3s;
     color: var(--clr-black-500);
@@ -233,15 +320,14 @@ section {
 
 /* ------------ SKILLS SECTION ------------ */
 
-.skills-title {
+/*.skills-title {
     margin-bottom: 0.5em;
-}
+}*/
 
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(10px, 1fr));
     grid-row-gap: 2em;
-
 }
 
 .skill {
@@ -256,9 +342,9 @@ section {
     font-size: 3.5rem;
 }
 
-.skill-title {
+/*.skill-title {
     margin-bottom: 0.5em;
-}
+}*/
 
 .html i {
     color: #f16529
@@ -304,73 +390,6 @@ section {
     color: #bb89f3;
 }
 
-/* ------------ PROJECTS SECTION ------------ */
-
-.project {
-    background-color: var(--clr-black-300);
-    padding: 1.5em;
-    margin-top: 2rem;
-    border-radius: 0.2rem;
-    overflow: hidden;
-    box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
-    -webkit-box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
-    -moz-box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
-}
-
-.project-img img {
-    width: 100%;
-    height: auto;
-}
-
-.project-title {
-    font-weight: bold;
-    color: var(--clr-green-500);
-    font-size: clamp(1.6rem, 4vw, 2rem);
-    margin: 0.5em 0;
-}
-
-.project-title a {
-    transition: 0.3s;
-}
-
-.project-title a:hover {
-    color: var(--clr-green-300);;
-}
-
-.project-description {
-    font-weight: normal;
-    font-size: clamp(1.1rem, 2vw, 1.3rem);
-}
-
-.project-tools {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1em 0;
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    font-weight: 200;
-}
-
-.project-tools li {
-    margin-right: 0.6em;
-}
-
-.project-links {
-    color: var(--clr-green-500);
-    display: flex;
-    justify-content: flex-end;
-}
-
-.project-links a {
-    margin-top: 0.2rem;
-    font-size: clamp(1.5rem, 5vw, 1.8rem);
-    margin-left: 1.5rem;
-    transition: 0.3s;
-}
-
-.project-links a:hover {
-    color: var(--clr-green-300);
-}
-
 /* ------------ CONTACT SECTION ------------ */
 
 .contact-section {
@@ -389,7 +408,7 @@ section {
 .contact-container {
     width: 85%;
     max-width: 25em;
-    background: hsl(0, 2%, 10%);
+    background: var(--clr-black-400);
     padding: 2.5em 2em;
     /*margin: 1.2em 2em;*/
     margin-bottom: 2em;
@@ -416,22 +435,19 @@ section {
 }
 
 .contact-mail p {
-    margin: 0.4rem 0;
+    margin-bottom: 0.4rem;
 }
 
 .form-elements {
-    font-size: 1em;
-    font-family: 'Cyber', sans-serif;
+    font-size: 1rem;
     margin: 0.8rem 0;
     padding: 0.7rem 1rem;
     max-height: 100%;
     width: 100%;
-    background: hsl(0, 0%, 15%);
-    border-width: 0 0 0.3em;
+    background: var(--clr-black-200);
+    border-width: 0 0 0.2rem;
     outline: 0;
     color: var(--clr-white-300);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4px), calc(100% - 2px) calc(100% - 2px), 102px calc(100% - 2px), 100px 100%, 4px 100%, 0 calc(100% - 4px));
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4px), calc(100% - 2px) calc(100% - 2px), 102px calc(100% - 2px), 100px 100%, 4px 100%, 0 calc(100% - 4px));
 }
 
 .form-elements:focus {
@@ -439,8 +455,9 @@ section {
 }
 
 .form-elements::placeholder {
-    font-family: 'Cyber', sans-serif;
-    font-size: 1em;
+    color: var(--clr-white-500);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
 }
 
 .contact-message {
@@ -448,25 +465,27 @@ section {
 }
 
 .contact-message::placeholder {
-    font-family: 'Cyber', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
 }
 
-.contact-button {
-    color: var(--clr-black-300);
+.contact-btn {
+    font-family: "Nunito", sans-serif;
+    color: var(--clr-black-500);
     margin-top: 1rem;
     width: 100%;
     padding: 0.4em 0;
-    font-size: 1.2rem;
-    font-family: 'Cyber', sans-serif;
+    font-weight: bold;
+    font-size: clamp(1em, 3vw, 1.2em);
+    border-radius: 0.2rem;
     background: var(--clr-green-500);
     border: none;
     outline: transparent;
     cursor: pointer;
-    font-weight: bold;
     transition: 0.3s;
 }
 
-.contact-button:hover {
+.contact-btn:hover {
     background: var(--clr-green-300);
 }
 
@@ -493,9 +512,9 @@ section {
 }
 
 .logo {
-    font-weight: 500;
+
     font-size: 1.6rem;
-    font-family: "Oxanium", sans-serif;
+    font-family: "Nunito", sans-serif;
 }
 
 .logo span {
@@ -515,7 +534,8 @@ section {
     align-items: center;
     padding: 1em;
     width: 60%;
-    font-size: 1.9em;
+    font-size: 1.6em;
+    font-weight: 700;
     transform: translateX(100%);
     transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -595,13 +615,13 @@ section {
 }
 
 .nav-media-btns a {
-    padding: 0 0.4em;
+    font-size: 1.2em;
+    padding: 0 0.5em;
     text-decoration: none;
     color: var(--clr-white-300);
 }
 
 /* ------------- BUTTONS ------------- */
-
 
 .scrollBtn {
     position: fixed;
@@ -644,8 +664,8 @@ section {
 /* ------------- TABLETS ------------- */
 @media screen and (min-width: 481px) {
     section {
-        background-color: #340f0f;
-        padding: 1.2rem 3rem;
+        /*background-color: #340f0f;*/
+        padding: 2rem 3rem;
     }
 
     /* ------------- ABOUT ---------------*/
@@ -679,8 +699,7 @@ section {
 @media only screen and (min-width: 769px) {
     section {
         /*background-color: #0d310d;*/
-        background-color: var(--clr-black-500);
-        padding: 1.2rem 5rem;
+        padding: 2rem 5rem;
     }
 
     /* ------------ NAVIGATION ---------------*/
@@ -704,6 +723,7 @@ section {
         width: auto;
         padding: 0;
         font-size: 1.5em;
+        font-weight: bold;
         transform: translateX(0px);
     }
 
@@ -775,8 +795,12 @@ section {
 
     .project-description {
         background: var(--clr-black-300);
+        line-height: 1.8rem;
         padding: 1rem;
         border-radius: 0.4rem;
+        box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
+        -webkit-box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
+        -moz-box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
     }
 
     .project-links-left {
@@ -816,9 +840,8 @@ section {
         z-index: 1;
     }
 
-    .contact-button {
-        font-size: 1.2rem;
-        width: 8em;
+    .contact-btn {
+        width: 10em;
     }
 
     /* ------------- BUTTONS --------------*/
@@ -832,8 +855,8 @@ section {
 /*@media only screen and (min-width: 992px) {*/
 @media only screen and (min-width: 1025px) {
     section {
-        background-color: #602e0c;
-        padding: 1.2rem 8rem;
+        /*background-color: #602e0c;*/
+        padding: 2rem 8rem;
     }
 
     /* -------------- ABOUT ---------------*/
@@ -885,8 +908,8 @@ section {
 /* ---------------- DESKTOPS ----------------- */
 @media screen and (min-width: 1201px) {
     section {
-        background-color: #340d22;
-        padding: 1.2rem 8rem;
+        /*background-color: #340d22;*/
+        padding: 2rem 8rem;
     }
 
     /* -------------- ABOUT ---------------*/
@@ -924,8 +947,8 @@ section {
 /* ------------- BIG DESKTOPS ------------- */
 @media screen and (min-width: 1801px) {
     section {
-        background: var(--clr-black-500);
-        padding: 1.2rem 10rem;
+        /*background: var(--clr-black-500);*/
+        padding: 2rem 10rem;
     }
 
     .logo {
@@ -934,13 +957,12 @@ section {
 
     .nav-bar {
         padding: 0 3rem;
-        min-height: 11vh;
+        min-height: 10vh;
     }
 
     .nav-list {
         font-size: 1.6rem;
     }
-
 
     /* -------------- ABOUT ---------------*/
     .about-container {
@@ -964,14 +986,5 @@ section {
 
     .contact-container p {
         font-size: 1.2rem;
-    }
-
-    .form-elements {
-        font-size: 1.2rem;
-    }
-
-    .contact-button {
-        font-size: 1.3rem;
-        width: 10em;
     }
 }
