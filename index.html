@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description"
               content="Mihai Tuta, web developer, portfolio containing details about me, my work and my skills.">
-        <title>Mihai Tuta | Web developer | Portfolio</title>
+        <title>Mihai Tuta | Front-end developer | Portfolio</title>
         <link rel=icon href=favicon.ico>
         <link rel="stylesheet" href=style.css>
         <script src="map.js"></script>
@@ -50,7 +50,7 @@
 
                 <div class="hero-container">
                     <h1>Hi, I'm Mihai Tuță</h1>
-                    <h1>I'm a <span>web developer</span></h1>
+                    <h1>I'm a <span>Front end developer</span></h1>
                     <div class="hero-btns-div">
                         <a class="projects-btn media-btns hero-btns" href="#projects" rel="noreferrer">
                             PROJECTS
@@ -260,7 +260,8 @@
                         <img loading="lazy" class="about-img" src="assets/avatar-min.jpg" alt="avatar.jpg">
 
                         <div class="about-description">
-                            <p>Hi! My name is Mihai and I am a <span>web developer</span> recently relocated in Germany.
+                            <p>Hi! My name is Mihai and I am a <span>Front end developer</span> recently relocated in
+                                Germany.
                             </p>
                             <p>I am a <span>responsible</span> and <span>ambitious</span> person, <span>devoted</span>
                                 and <span>passionate</span> about technology and
@@ -317,10 +318,20 @@
                         <p>tutamihai@gmail.com</p>
                     </a>
                     <form name="contact" method="POST" data-netlify="true" class="contact-form" action="/#contact">
-                        <input class="contact-name form-elements" name="name" type="text" placeholder="Your Name *">
-                        <input class="contact-email form-elements" name="email" type="text" placeholder="Your Email *">
-                        <textarea class="contact-message form-elements" name="message" id="" rows="10"
-                                  placeholder="Message *"></textarea>
+                        <div class="form-group">
+                            <input class="contact-name form-elements" name="name" type="text" placeholder="Your Name *">
+                            <span class="input-error-msg"></span>
+                        </div>
+                        <div class="form-group">
+                            <input class="contact-email form-elements" name="email" type="text"
+                                   placeholder="Your Email *">
+                            <span class="input-error-msg"></span>
+                        </div>
+                        <div class="form-group">
+                             <textarea class="contact-message form-elements" name="message" id="" rows="10"
+                                       placeholder="Message *"></textarea>
+                            <span class="input-error-msg"></span>
+                        </div>
                         <button class="contact-btn" type="submit">SEND</button>
                     </form>
                 </div>

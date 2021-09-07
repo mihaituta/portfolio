@@ -125,7 +125,7 @@ section {
 
 .hero-container h1 {
     line-height: 1.1;
-    font-size: clamp(1.7em, 5vw, 5em);
+    font-size: clamp(1.3em, 6vw, 4.5em);
 }
 
 .hero-container {
@@ -438,12 +438,17 @@ span {
     margin-bottom: 0.4rem;
 }
 
+.form-group {
+    width: 100%;
+}
+
 .form-elements {
+    font-family: 'Nunito', sans-serif;
     font-size: 1rem;
     margin: 0.8rem 0;
     padding: 0.7rem 1rem;
     max-height: 100%;
-    width: 100%;
+    width: inherit;
     background: var(--clr-black-200);
     border-width: 0 0 0.2rem;
     outline: 0;
@@ -454,7 +459,8 @@ span {
     border-bottom-color: var(--clr-green-500);
 }
 
-.form-elements::placeholder {
+.form-elements::placeholder,
+.contact-message::placeholder {
     color: var(--clr-white-500);
     font-family: 'Nunito', sans-serif;
     font-size: 1rem;
@@ -462,11 +468,6 @@ span {
 
 .contact-message {
     resize: none;
-}
-
-.contact-message::placeholder {
-    font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
 }
 
 .contact-btn {
@@ -489,10 +490,19 @@ span {
     background: var(--clr-green-300);
 }
 
-/*footer {
-    height: 500px;
-    background-color: hsl(0, 0%, 15%);
-}*/
+.input-error-msg {
+    margin-bottom: 0.5rem;
+    display: none;
+}
+
+.form-group.invalid .input-error-msg {
+    color: #cc3534;
+    display: block;
+}
+
+.form-group.invalid .form-elements {
+    border-bottom-color: #cc3534;
+}
 
 /* ===========================================
                  COMPONENTS
@@ -512,7 +522,6 @@ span {
 }
 
 .logo {
-
     font-size: 1.6rem;
     font-family: "Nunito", sans-serif;
 }
