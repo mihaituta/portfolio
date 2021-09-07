@@ -233,12 +233,12 @@ span {
 .project-tools {
     display: flex;
     flex-wrap: wrap;
-    margin: 1em 0;
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-top: 1rem;
+    font-size: clamp(1rem, 2vw, 1rem);
 }
 
 .project-tools li {
-    margin-right: 0.8em;
+    margin-right: 0.8rem;
 }
 
 .project-links {
@@ -923,6 +923,23 @@ span {
         text-align: right;
     }
 
+
+    .project-tools li {
+        background: var(--clr-black-200);
+        color: var(--clr-green-500);
+        padding: 0.4rem 0.8rem;
+        margin-bottom: 0.8rem;
+        border-radius: 0.2rem;
+        box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
+        -webkit-box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
+        -moz-box-shadow: 8px 8px 15px -8px rgba(0, 0, 0, 0.7);
+    }
+
+    .project-tools-reverse li {
+        margin-right: 0;
+        margin-left: 0.8rem;
+    }
+
     .project-tools-reverse {
         justify-content: flex-end;
     }
@@ -934,12 +951,14 @@ span {
     }
 
     .project-img {
-        grid-column: 6 / -1;
+        /*grid-column: 6 / -1;*/
+        grid-column: 5 / -1;
         grid-row: 1 / -1;
     }
 
     .project-img-reverse {
-        grid-column: 1 / 7;
+        /*grid-column: 1 / 7;*/
+        grid-column: 1 / 9;
         grid-row: 1 / -1;
     }
 

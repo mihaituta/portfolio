@@ -174,6 +174,8 @@ contactForm.addEventListener("submit", (e) => {
             nameInput.value = ''
             emailInput.value = ''
             messageInput.value = ''
+            isFormValid = false
+            shouldValidate = false
         }).catch(() => showAlert(ErrorAlert))
     }
 })
