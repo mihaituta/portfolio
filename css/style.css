@@ -32,31 +32,31 @@ html {
 
 @font-face {
     font-family: Cyber;
-    src: url("assets/fonts/BlenderPro-Thin.woff") format("woff");
+    src: url("../assets/fonts/BlenderPro-Thin.woff") format("woff");
     font-weight: 100;
 }
 
 @font-face {
     font-family: Cyber;
-    src: url("assets/fonts/BlenderPro-Book.woff") format("woff");
+    src: url("../assets/fonts/BlenderPro-Book.woff") format("woff");
     font-weight: 200;
 }
 
 @font-face {
     font-family: Cyber;
-    src: url("assets/fonts/BlenderPro-Medium.woff") format("woff");
+    src: url("../assets/fonts/BlenderPro-Medium.woff") format("woff");
     font-weight: normal;
 }
 
 @font-face {
     font-family: Cyber;
-    src: url("assets/fonts/BlenderPro-Bold.woff") format("woff");
+    src: url("../assets/fonts/BlenderPro-Bold.woff") format("woff");
     font-weight: bold;
 }
 
 @font-face {
     font-family: Oxanium;
-    src: url("assets/fonts/Oxanium-Regular.ttf") format('truetype');
+    src: url("../assets/fonts/Oxanium-Regular.ttf") format('truetype');
 }
 
 /* ===========================================
@@ -117,7 +117,7 @@ section {
 
 .hero-section {
     height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(115, 113, 113, 0.2)), url('assets/bg1.jpg');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(115, 113, 113, 0.2)), url('../assets/bg1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -234,7 +234,7 @@ span {
     display: flex;
     flex-wrap: wrap;
     margin-top: 1rem;
-    font-size: clamp(1rem, 2vw, 1rem);
+    font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 .project-tools li {
@@ -319,11 +319,6 @@ span {
 }
 
 /* ------------ SKILLS SECTION ------------ */
-
-/*.skills-title {
-    margin-bottom: 0.5em;
-}*/
-
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(10px, 1fr));
@@ -342,9 +337,9 @@ span {
     font-size: 3.5rem;
 }
 
-/*.skill-title {
-    margin-bottom: 0.5em;
-}*/
+.skill-title {
+    margin-bottom: 0.5rem;
+}
 
 .html i {
     color: #f16529

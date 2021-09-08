@@ -1,0 +1,184 @@
+/* ===========================================
+                 CAROUSEL STYLES
+ ========================================== */
+
+.project-title {
+    margin-top: 1rem;
+}
+
+section {
+    padding-top: 5rem;
+}
+
+.slideshow-container {
+    position: relative;
+}
+
+.slideshow-content {
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.slideshow-img {
+    width: 100%;
+}
+
+.slideshow-slide {
+    display: none;
+}
+
+.slideshow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 0.6rem;
+    transition: background-color 0.3s;
+}
+
+.slideshow-button-prev {
+    left: 0;
+    z-index: 1;
+}
+
+.slideshow-button-next {
+    right: 0;
+}
+
+.slideshow-button i {
+    color: var(--clr-green-500);
+    font-size: clamp(1.5rem, 7vw, 2.5rem);
+    transition: color 0.3s;
+}
+
+.slideshow-button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slideshow-button i:hover {
+    color: var(--clr-green-300);
+}
+
+.caption {
+    color: var(--clr-green-500);
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
+    /*padding: 0.6rem 0.8rem;*/
+    margin-top: 0.3rem;
+    /*position: absolute;*/
+    /*bottom: 0.8rem;*/
+    width: 100%;
+    text-align: center;
+    /*text-shadow: 2px 2px 2px black;*/
+}
+
+.slideshow-nav {
+    padding: 0.8rem 0;
+    display: none;
+}
+
+.slideshow-dot {
+    background-color: hsl(0, 0%, 25%);
+    border: 0;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slideshow-dot:hover {
+    background: var(--clr-green-300);
+}
+
+.slideshow-dot.current-slide {
+    background: var(--clr-green-500);
+}
+
+.is-hidden {
+    display: none;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* ===========================================
+                 MEDIA QUERIES
+ ========================================== */
+
+/* ------------- TABLETS ------------- */
+@media screen and (min-width: 481px) {
+}
+
+/* ------------- LAPTOPS/TABLETS ------------- */
+@media only screen and (min-width: 769px) {
+    section {
+        padding-top: 6rem;
+    }
+
+    .slideshow-nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    /*    .slideshow-button-left {
+            left: -2.5rem;
+            z-index: 1;
+        }
+
+        .slideshow-button-right {
+            right: -2.5rem;
+        }*/
+    .slideshow-button i {
+        font-size: 3.5rem;
+    }
+}
+
+/* ------------- LAPTOPS/DESKTOPS ------------- */
+/*@media only screen and (min-width: 992px) {*/
+@media only screen and (min-width: 1025px) {
+    section {
+        margin: 0 8rem;
+    }
+}
+
+/* ---------------- DESKTOPS ----------------- */
+@media screen and (min-width: 1201px) {
+    section {
+        margin: 0 10rem;
+    }
+}
+
+/* ------------- BIG DESKTOPS ------------- */
+@media screen and (min-width: 1801px) {
+    section {
+        margin: 0 20rem;
+    }
+}
