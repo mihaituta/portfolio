@@ -1,4 +1,4 @@
-const slideshow = document.querySelector('.slideshow-content')
+const slideshow = document.querySelector('.slideshow')
 const slides = Array.from(slideshow.children)
 const dotsNav = document.querySelector('.slideshow-nav')
 const dots = Array.from(dotsNav.children)
@@ -81,3 +81,12 @@ dotsNav.addEventListener('click', e => {
     showSlide(slideshow, currentSlide, targetSlide)
     updateDots(currentDot, targetDot)
 })
+
+const video = document.querySelector(".video");
+
+// set time for timestamps on video to jump to
+const setTime = (time) => {
+    // transform time from format MM:SS (ex: 00:15) format to seconds (15)
+    const split = time.split(":");
+    video.currentTime = split[0] * 60 + (+split[1])
+}

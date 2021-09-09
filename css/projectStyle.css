@@ -1,20 +1,71 @@
 /* ===========================================
-                 CAROUSEL STYLES
+                 SLIDESHOW STYLES
+ ========================================== */
+/* ===========================================
+                 TYPOGRAPHY
+ ========================================== */
+a {
+    color: var(--clr-green-500);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--clr-green-300)
+}
+
+h2 {
+    font-size: 1.8rem;
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 0.4rem;
+}
+
+h3 {
+    color: var(--clr-green-500);
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+/* ===========================================
+                   LAYOUT
  ========================================== */
 
-.project-title {
-    margin-top: 1rem;
+.project-section {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    margin: 0 auto;
+    max-width: 55rem;
 }
 
-section {
-    padding-top: 5rem;
+.title {
+    margin-top: 2.5rem;
+    color: var(--clr-green-500);
+    margin-bottom: 0.5rem;
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
 }
+
+.project-description-container {
+    letter-spacing: 0.05rem;
+    font-weight: normal;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.project-description-container li {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+/* ------------ SLIDESHOW ------------ */
 
 .slideshow-container {
     position: relative;
 }
 
 .slideshow-content {
+    position: relative;
+}
+
+.slideshow {
     width: 100%;
     position: relative;
     margin: auto;
@@ -42,7 +93,6 @@ section {
 
 .slideshow-button-prev {
     left: 0;
-    z-index: 1;
 }
 
 .slideshow-button-next {
@@ -66,17 +116,14 @@ section {
 .caption {
     color: var(--clr-green-500);
     font-size: clamp(1.1rem, 5vw, 1.5rem);
-    /*padding: 0.6rem 0.8rem;*/
     margin-top: 0.3rem;
-    /*position: absolute;*/
-    /*bottom: 0.8rem;*/
+    position: absolute;
     width: 100%;
     text-align: center;
-    /*text-shadow: 2px 2px 2px black;*/
 }
 
 .slideshow-nav {
-    padding: 0.8rem 0;
+    margin-top: 3rem;
     display: none;
 }
 
@@ -103,7 +150,6 @@ section {
     display: none;
 }
 
-/* Fading animation */
 .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
@@ -129,6 +175,57 @@ section {
     }
 }
 
+/* ------------ VIDEO ------------ */
+
+.video-container {
+    width: 100%;
+}
+
+.video {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.timestamps-content p {
+    line-height: 1.4rem;
+}
+
+.timestamp {
+    color: var(--clr-green-500);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.timestamp:hover {
+    color: var(--clr-green-300);
+}
+
+.links {
+    color: var(--clr-green-500);
+    display: flex;
+    margin: 1rem 0;
+}
+
+.links a {
+    margin-right: 1.5rem;
+    transition: 0.3s;
+}
+
+.links i {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
+.video-btn {
+    padding: 0.4em 1em;
+    align-self: center;
+    font-weight: bold;
+    font-size: clamp(1em, 5vw, 1.1em);
+    border-radius: 0.2rem;
+    background: var(--clr-green-500);
+    transition: 0.3s;
+    color: var(--clr-black-500);
+}
+
 /* ===========================================
                  MEDIA QUERIES
  ========================================== */
@@ -139,8 +236,9 @@ section {
 
 /* ------------- LAPTOPS/TABLETS ------------- */
 @media only screen and (min-width: 769px) {
-    section {
-        padding-top: 6rem;
+    .project-section {
+        margin: 0 auto;
+        padding: 6rem 3rem 6rem 3rem;
     }
 
     .slideshow-nav {
@@ -148,37 +246,63 @@ section {
         justify-content: center;
     }
 
-    /*    .slideshow-button-left {
-            left: -2.5rem;
-            z-index: 1;
-        }
+    .slideshow-button-left {
+        left: -2.5rem;
+    }
 
-        .slideshow-button-right {
-            right: -2.5rem;
-        }*/
+    .slideshow-button-right {
+        right: -2.5rem;
+    }
+
     .slideshow-button i {
         font-size: 3.5rem;
     }
+
+    .timestamps-content {
+        display: flex;
+        gap: 1rem;
+    }
+
 }
 
 /* ------------- LAPTOPS/DESKTOPS ------------- */
-/*@media only screen and (min-width: 992px) {*/
 @media only screen and (min-width: 1025px) {
-    section {
-        margin: 0 8rem;
+    .project-section {
+        margin: 0 auto;
+        padding: 6rem 0 6rem 0;
+    }
+
+    .timestamps-content p {
+        font-size: 1.2rem;
     }
 }
 
 /* ---------------- DESKTOPS ----------------- */
 @media screen and (min-width: 1201px) {
-    section {
-        margin: 0 10rem;
+    .project-section {
+        margin: 0 auto;
+        padding: 6rem 0 6rem 0;
+    }
+
+    .timestamps-content {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .timestamps-title {
+        font-size: 1.5rem;
+    }
+
+    .timestamps-content p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
     }
 }
 
 /* ------------- BIG DESKTOPS ------------- */
 @media screen and (min-width: 1801px) {
-    section {
-        margin: 0 20rem;
+    .project-section {
+        margin: 0 auto;
+        padding: 6rem 0 6rem 0;
     }
 }

@@ -177,7 +177,7 @@ span {
     color: var(--clr-black-500);
 }
 
-.projects-btn:hover, .resume-btn:hover {
+.projects-btn:hover, .resume-btn:hover, .video-btn:hover {
     color: var(--clr-black-300);
     background: var(--clr-green-300);
 }
