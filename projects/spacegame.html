@@ -2,9 +2,123 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description"
+              content="Mihai Tuta, web developer, portfolio containing details about me, my work and my skills.">
+        <title>SpaceGame | Mihai Tuta | Front-end developer | Portfolio</title>
+        <link rel=icon href=../favicon.ico>
+        <link rel="stylesheet" href=../css/style.css>
+        <link rel="stylesheet" href=../css/projectStyle.css>
+        <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
     </head>
     <body>
+        <nav class="nav-bar">
+            <a href="../">
+                <h1 class="logo">Mihai<span> Tuță</span></h1>
+            </a>
+            <ul class="nav-list">
+                <li><a class="nav-links" href="../">Home</a></li>
+                <li><a class="nav-links" href="../#projects">Projects</a></li>
+                <li><a class="nav-links" href="../#about">About me</a></li>
+                <li><a class="nav-links" href="../#skills">Skills</a></li>
+                <li><a class="nav-links" href="../#contact">Contact</a></li>
+                <li class="nav-links nav-media-btns">
+                    <a href="https://www.linkedin.com/in/mihai-tuta/" rel="noreferrer" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/tutamihai" rel="noreferrer" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:tutamihai@gmail.com" rel="noreferrer" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="burger-btn">
+                <div class="burger-line1"></div>
+                <div class="burger-line2"></div>
+                <div class="burger-line3"></div>
+            </div>
+        </nav>
+        <main class="content">
+            <section class="project-section">
+                <div class="slideshow-container">
 
+                    <div class="slideshow-content">
+                        <ul class="slideshow">
+                            <li class="slideshow-slide current-slide fade">
+                                <img class="slideshow-img" src="../assets/spacegame/SG1.jpg"
+                                     alt="projectImage1">
+                                <div class="caption">SpaceGame 1</div>
+                            </li>
+                            <li class="slideshow-slide fade">
+                                <img class="slideshow-img" src="../assets/spacegame/SG2.jpg"
+                                     alt="projectImage2">
+                                <div class="caption">SpaceGame 2</div>
+                            </li>
+                            <li class="slideshow-slide fade">
+                                <img class="slideshow-img" src="../assets/spacegame/SG3.jpg"
+                                     alt="projectImage3">
+                                <div class="caption">SpaceGame 3</div>
+                            </li>
+                            <li class="slideshow-slide fade">
+                                <img class="slideshow-img" src="../assets/spacegame/SG4.jpg"
+                                     alt="projectImage4">
+                                <div class="caption">Game Over</div>
+                            </li>
+                        </ul>
+
+                        <button class="slideshow-button slideshow-button-prev is-hidden">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slideshow-button slideshow-button-next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="slideshow-nav">
+                        <button class="slideshow-dot current-slide"></button>
+                        <button class="slideshow-dot"></button>
+                        <button class="slideshow-dot"></button>
+                        <button class="slideshow-dot"></button>
+                    </div>
+
+                </div>
+
+                <div class="project-description-container">
+                    <h1 class="title">SpaceGame</h1>
+                    <p>SpaceGame is a college-made game.</p>
+
+                    <div class="links">
+                        <a class="video-btn" href="#video" rel="noreferrer">VIDEO</a>
+                        <a href="https://github.com/mihaituta/SDL-Space-game" rel="noreferrer" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+
+                    <h2>Technologies</h2>
+                    <p>
+                        The game is written in <span>C</span> with the help of the <span>SDL</span> library.
+                    </p>
+
+                    <h2>Functionalities</h2>
+                    <ul>
+                        <li>The objective of the game is to score as high as possible without dying.</li>
+                        <li>The player has 3 lives and if he is hit 4 times he loses one life.</li>
+                        <li>The movement and shooting speed and the number of lives of the enemies increase with the score.</li>
+                    </ul>
+                </div>
+
+                <div id="video" class="video-container">
+                    <h1 class="title">Video Example</h1>
+
+                    <video class="video" src="../assets/spacegame/spacegame.mp4" controls preload="auto"></video>
+                </div>
+            </section>
+        </main>
+
+        <button onclick="scrollToTop()" class="scrollBtn"><i class="fas fa-chevron-up"></i></button>
+        <script src="../js/app.js"></script>
+        <script src="../js/slideshow.js"></script>
     </body>
 </html>

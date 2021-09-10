@@ -2,9 +2,174 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description"
+              content="Mihai Tuta, web developer, portfolio containing details about me, my work and my skills.">
+        <title>InfinityCode | Mihai Tuta | Front-end developer | Portfolio</title>
+        <link rel=icon href=../favicon.ico>
+        <link rel="stylesheet" href=../css/style.css>
+        <link rel="stylesheet" href=../css/projectStyle.css>
+        <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
     </head>
     <body>
+        <nav class="nav-bar">
+            <a href="../">
+                <h1 class="logo">Mihai<span> Tuță</span></h1>
+            </a>
+            <ul class="nav-list">
+                <li><a class="nav-links" href="../">Home</a></li>
+                <li><a class="nav-links" href="../#projects">Projects</a></li>
+                <li><a class="nav-links" href="../#about">About me</a></li>
+                <li><a class="nav-links" href="../#skills">Skills</a></li>
+                <li><a class="nav-links" href="../#contact">Contact</a></li>
+                <li class="nav-links nav-media-btns">
+                    <a href="https://www.linkedin.com/in/mihai-tuta/" rel="noreferrer" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/tutamihai" rel="noreferrer" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:tutamihai@gmail.com" rel="noreferrer" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="burger-btn">
+                <div class="burger-line1"></div>
+                <div class="burger-line2"></div>
+                <div class="burger-line3"></div>
+            </div>
+        </nav>
+        <main class="content">
+            <section class="project-section">
+                <div class="slideshow-container">
 
+                    <div class="slideshow-content">
+                        <ul class="slideshow">
+                            <li class="slideshow-slide current-slide fade">
+                                <img class="slideshow-img" src="../assets/infinitycode/IC1.jpg"
+                                     alt="projectImage1">
+                                <div class="caption">Main page</div>
+                            </li>
+                            <li class="slideshow-slide fade">
+                                <img class="slideshow-img" src="../assets/infinitycode/IC2.jpg"
+                                     alt="projectImage2">
+                                <div class="caption">Rules page</div>
+                            </li>
+                            <li class="slideshow-slide fade">
+                                <img class="slideshow-img" src="../assets/infinitycode/IC3.jpg"
+                                     alt="projectImage3">
+                                <div class="caption">News page</div>
+                            </li>
+                            <li class="slideshow-slide fade">
+                                <img class="slideshow-img" src="../assets/infinitycode/IC4.jpg"
+                                     alt="projectImage4">
+                                <div class="caption">Participants page</div>
+                            </li>
+                            <li class="slideshow-slide fade">
+                                <img class="slideshow-img" src="../assets/infinitycode/IC5.jpg"
+                                     alt="projectImage5">
+                                <div class="caption">Contact page</div>
+                            </li>
+                            <li class="slideshow-slide fade">
+                                <img class="slideshow-img" src="../assets/infinitycode/IC6.jpg"
+                                     alt="projectImage6">
+                                <div class="caption">Login for administration</div>
+                            </li>
+                            <li class="slideshow-slide fade">
+                                <img class="slideshow-img" src="../assets/infinitycode/IC7.jpg"
+                                     alt="projectImage7">
+                                <div class="caption">Add participant</div>
+                            </li>
+                            <li class="slideshow-slide fade">
+                                <img class="slideshow-img" src="../assets/infinitycode/IC8.jpg"
+                                     alt="projectImage8">
+                                <div class="caption">Add news article</div>
+                            </li>
+                        </ul>
+
+                        <button class="slideshow-button slideshow-button-prev is-hidden">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slideshow-button slideshow-button-next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="slideshow-nav">
+                        <button class="slideshow-dot current-slide"></button>
+                        <button class="slideshow-dot"></button>
+                        <button class="slideshow-dot"></button>
+                        <button class="slideshow-dot"></button>
+                        <button class="slideshow-dot"></button>
+                        <button class="slideshow-dot"></button>
+                        <button class="slideshow-dot"></button>
+                        <button class="slideshow-dot"></button>
+                    </div>
+
+                </div>
+
+                <div class="project-description-container">
+                    <h1 class="title">InfinityCode</h1>
+                    <p>InfinityCode is a project made for college.</p>
+
+                    <div class="links">
+                        <a class="video-btn" href="#video" rel="noreferrer">VIDEO</a>
+                    </div>
+
+                    <h2>Technologies</h2>
+                    It was created using <span>HTML, CSS, JavaScript, PHP</span> and <span>MySQL.</span>
+
+                    <h2>Functionalities</h2>
+                    <p>
+                        The website is an imaginary programming contest called <span>InfinityCode.</span>
+                    </p>
+                    <br>
+
+                    <p>There are 8 pages: <span>home, rules, sponsors, news, participants, results</span> and <span>contact</span>
+                        that can be accessed by anyone, and an <span>administration page</span> that is hidden and
+                        protected with name and
+                        password for admins.</p>
+                    <br>
+                    <p> Users can register to the contest on the <span>participants</span> page.</p>
+                    <br>
+
+                    <p><span>Administrators</span> can:</p>
+                    <ul>
+                        <li>Add, modify or delete <span>participants.</span></li>
+                        <li>Add, modify, or delete <span>news articles.</span></li>
+                    </ul>
+
+                    <div id="video" class="video-container">
+                        <h1 class="title">Video Example</h1>
+
+                        <video class="video" src="../assets/infinitycode/infinityCode.mp4" controls preload="auto"
+                               muted></video>
+                        <div class="timestamps-content">
+                            <div class="user-timestamps">
+                                <h3>User</h3>
+                                <p>Rules page: <span class="timestamp" onclick="setTime('00:06')">00:06</span></p>
+                                <p>Sponsors: <span class="timestamp" onclick="setTime('00:10')">00:10</span></p>
+                                <p>News page: <span class="timestamp" onclick="setTime('00:15')">00:15</span></p>
+                                <p>Add participant: <span class="timestamp" onclick="setTime('00:24')">00:24</span></p>
+                                <p>Results page: <span class="timestamp" onclick="setTime('00:41')">00:41</span></p>
+                                <p>Contact page: <span class="timestamp" onclick="setTime('00:44')">00:44</span></p>
+                            </div>
+                            <div class="administration-timestamps">
+                                <h3>Admin</h3>
+                                <p>Administration page: <span class="timestamp" onclick="setTime('00:47')">00:47</span>
+                                </p>
+                                <p>Edit participant: <span class="timestamp" onclick="setTime('01:00')">01:00</span></p>
+                                <p>Add new article: <span class="timestamp" onclick="setTime('01:11')">01:11</span></p>
+                            </div>
+                        </div>
+
+                    </div>
+            </section>
+        </main>
+
+        <button onclick="scrollToTop()" class="scrollBtn"><i class="fas fa-chevron-up"></i></button>
+        <script src="../js/app.js"></script>
+        <script src="../js/slideshow.js"></script>
     </body>
 </html>
