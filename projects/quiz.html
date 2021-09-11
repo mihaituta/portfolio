@@ -42,8 +42,7 @@
         </nav>
         <main class="content">
             <section class="project-section">
-                <div class="slideshow-container">
-
+                <div class="slideshow-container fade-in">
                     <div class="slideshow-content">
                         <ul class="slideshow">
                             <li class="slideshow-slide current-slide fade">
@@ -110,41 +109,54 @@
                 </div>
 
                 <div class="project-description-container">
-                    <h1 class="title">Quiz</h1>
-                    <p>Quiz is a project made for college.</p>
+                    <article class="fade-in">
+                        <h1 class="title">Quiz</h1>
+                        <hr>
 
-                    <div class="links">
-                        <a class="video-btn" href="#video" rel="noreferrer">VIDEO</a>
-                    </div>
+                        <p>Quiz is a project made for college.</p>
 
-                    <h2>Technologies</h2>
-                    <p>The application was written in <span>Java</span> using the <span>Jpheonix</span> library and the
-                        <span>SceneBuilder</span>
-                        tool.</p>
+                        <div class="links">
+                            <a class="video-btn" href="#video" rel="noreferrer">VIDEO</a>
+                        </div>
+                    </article>
 
-                    <h2>Functionalities</h2>
-                    <p>Quiz is a simple application for solving quizzes.</p>
-                    <br>
-                    <ul>
-                        <li>The user logs in then chooses a domain and a quiz corresponding to that domain.</li>
-                        <li>Each quiz contains 10 questions, the questions are read from a text file inside the
-                            application's
-                            folder.
-                        </li>
-                        <li>When a quiz is finished the user can review the results of the
-                            solved quiz or choose another quiz to solve.
-                        </li>
-                    </ul>
+                    <article class="fade-in">
+                        <h1 class="title">Technologies</h1>
+                        <hr>
+
+                        <p>The application was written in <span>Java</span> using the <span>Jpheonix</span> library and
+                            the
+                            <span>SceneBuilder</span>
+                            tool.</p>
+                    </article>
+
+                    <article class="fade-in">
+                        <h1 class="title">Functionalities</h1>
+                        <hr>
+
+                        <p>Quiz is a simple application for solving quizzes.</p>
+                        <br>
+                        <ul>
+                            <li>The user logs in then chooses a domain and a quiz corresponding to that domain.</li>
+                            <li>Each quiz contains 10 questions, the questions are read from a text file inside the
+                                application's
+                                folder.
+                            </li>
+                            <li>When a quiz is finished the user can review the results of the
+                                solved quiz or choose another quiz to solve.
+                            </li>
+                        </ul>
+                    </article>
                 </div>
-
-                <div id="video" class="video-container">
+                <div id="video" class="video-container fade-in">
                     <h1 class="title">Video Example</h1>
+                    <hr>
 
                     <video class="video" src="../assets/quiz/quiz.mp4" controls preload="auto"
                            muted></video>
                     <div class="timestamps-content">
                         <div class="user-timestamps">
-                            <h3>Timestamps</h3>
+                            <h2>Timestamps</h2>
                             <p>Choose domain and quiz: <span class="timestamp" onclick="setTime('00:14')">00:14</span>
                             </p>
                             <p>Go through questions: <span class="timestamp" onclick="setTime('00:21')">00:21</span></p>

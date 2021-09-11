@@ -42,7 +42,7 @@
         </nav>
         <main class="content">
             <section class="project-section">
-                <div class="slideshow-container">
+                <div class="slideshow-container fade-in">
 
                     <div class="slideshow-content">
                         <ul class="slideshow">
@@ -152,87 +152,100 @@
                 </div>
 
                 <div class="project-description-container">
-                    <h1 class="title">InfinityFood</h1>
-                    <p>InfinityFood is the project I made for my thesis when I graduated from college.</p>
+                    <article class="fade-in">
+                        <h1 class="title">InfinityFood</h1>
+                        <hr>
+                        <p>InfinityFood is the project I made for my thesis when I graduated from college.</p>
+                        <div class="links">
+                            <a class="video-btn" href="#video" rel="noreferrer">VIDEO</a>
+                            <a href="#" rel="noreferrer" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
 
-                    <div class="links">
-                        <a class="video-btn" href="#video" rel="noreferrer">VIDEO</a>
-                        <a href="#" rel="noreferrer" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
+                        <p>Front-end Github:
+                            <a href="https://github.com/mihaituta/vue-food" rel="noreferrer" target="_blank">github.com/mihaituta/vue-food</a>
+                        </p>
+                        <p>API Github:
+                            <a href="https://github.com/mihaituta/infinityfood-api-nodejs" rel="noreferrer"
+                               target="_blank">github.com/mihaituta/infinityfood-api-nodejs</a>
+                        </p>
+                    </article>
 
-                    <p>Front-end Github:
-                        <a href="https://github.com/mihaituta/vue-food" rel="noreferrer" target="_blank">github.com/mihaituta/vue-food</a>
-                    </p>
-                    <p>API Github:
-                        <a href="https://github.com/mihaituta/infinityfood-api-nodejs" rel="noreferrer" target="_blank">github.com/mihaituta/infinityfood-api-nodejs</a>
-                    </p>
+                    <article class="fade-in">
+                        <h1 class="title">Technologies</h1>
+                        <hr>
 
-                    <h2>Technologies</h2>
-                    <p>
-                        The back-end is an <span>API</span> made in <span>Node.js</span> and <span>Express.js</span>,
-                        and
-                        the front-end was created in
-                        <span>Vue.js</span> with the help of other smaller libraries for different functionalities:
-                    </p>
-                    <ul>
-                        <li><span>axios</span>, for sending requests to the API.</li>
-                        <li><span>vuetify</span>, a UI library that contains predefined components.</li>
-                        <li><span>vuelidate</span>, to validate inputs.</li>
-                    </ul>
-                    <br>
+                        <p>
+                            The back-end is an <span>API</span> made in <span>Node.js</span> and <span>Express.js</span>,
+                            and
+                            the front-end was created in
+                            <span>Vue.js</span> with the help of other smaller libraries for different functionalities:
+                        </p>
+                        <ul>
+                            <li><span>axios</span>, for sending requests to the API.</li>
+                            <li><span>vuetify</span>, a UI library that contains predefined components.</li>
+                            <li><span>vuelidate</span>, to validate inputs.</li>
+                        </ul>
+                        <br>
 
-                    <p> It uses <span>mongoDB</span> with the <span>mongoose</span> library as database.</p>
-                    <br>
+                        <p> It uses <span>mongoDB</span> with the <span>mongoose</span> library as database.</p>
+                        <br>
 
-                    <p> The front-end is hosted on <span>netlify</span> and the API is hosted on <span>heroku</span>.
-                    </p>
+                        <p> The front-end is hosted on <span>netlify</span> and the API is hosted on <span>heroku</span>.
+                        </p>
+                    </article>
 
-                    <h2>Functionalities</h2>
-                    <p> InfinityFood is a website for presenting and managing restaurants, fast foods, pizzerias and
-                        other
-                        food stores. Users can search for restaurants by name, filter restaurants by city, and order
-                        food.
-                    </p>
-                    <br>
+                    <article class="fade-in">
+                        <h1 class="title">Functionalities</h1>
+                        <hr>
+                        <p> InfinityFood is a website for presenting and managing restaurants, fast foods, pizzerias and
+                            other
+                            food stores. Users can search for restaurants by name, filter restaurants by city, and order
+                            food.
+                        </p>
+                        <br>
 
-                    <p>
-                        The website also has an administration section, which can only be accessed via the URL link, it
-                        does
-                        not exist on the main website. </p>
-                    <br>
+                        <p>
+                            The website also has an administration section, which can only be accessed via the URL link,
+                            it
+                            does
+                            not exist on the main website. </p>
+                        <br>
 
-                    <p> There are two types of users, administrators and staff members.</p>
-                    <br>
+                        <p> There are two types of users, administrators and staff members.</p>
+                        <br>
 
-                    <p><span>Administrators</span> can:</p>
-                    <ul>
-                        <li>Add, modify or delete <span>restaurants</span></li>
-                        <li>Add, modify, or delete other admin or staff <span>accounts</span></li>
-                    </ul>
-                    <br>
+                        <p><span>Administrators</span> can:</p>
+                        <ul>
+                            <li>Add, modify or delete <span>restaurants</span></li>
+                            <li>Add, modify, or delete other admin or staff <span>accounts</span></li>
+                        </ul>
+                        <br>
 
-                    <p><span>Staff members</span> can:</p>
-                    <ul>
-                        <li>Manage the website of the restaurant they belong to, they can change everything related to
-                            the
-                            restaurant page, title,
-                            images, texts, phone numbers, emails,
-                        </li>
-                        <li>Add, modify, or delete the restaurant <span>menus</span></li>
-                        <li>See, change status and delete the restaurant <span>orders</span> maded by users</li>
-                    </ul>
+                        <p><span>Staff members</span> can:</p>
+                        <ul>
+                            <li>Manage the website of the restaurant they belong to, they can change everything related
+                                to
+                                the
+                                restaurant page, title,
+                                images, texts, phone numbers, emails,
+                            </li>
+                            <li>Add, modify, or delete the restaurant <span>menus</span></li>
+                            <li>See, change status and delete the restaurant <span>orders</span> maded by users</li>
+                        </ul>
+                    </article>
                 </div>
 
-                <div id="video" class="video-container">
+                <div id="video" class="video-container fade-in">
                     <h1 class="title">Video Example</h1>
+                    <hr>
 
                     <video class="video" src="../assets/infinityfood/infinityFood.mp4" controls preload="auto"
                            muted></video>
                     <div class="timestamps-content">
                         <div class="user-timestamps">
-                            <h3>User</h3>
+                            <h2>User</h2>
                             <p>Search by citiy: <span class="timestamp" onclick="setTime('00:05')">00:05</span></p>
                             <p>Search by name: <span class="timestamp" onclick="setTime('00:17')">00:17</span></p>
                             <p>Search by city and name: <span class="timestamp" onclick="setTime('00:25')">00:25</span>
@@ -244,7 +257,7 @@
                             <p>Confirm order: <span class="timestamp" onclick="setTime('01:52')">01:52</span></p>
                         </div>
                         <div class="administration-timestamps">
-                            <h3>Staff</h3>
+                            <h2>Staff</h2>
                             <p>Login as restaurant member: <span class="timestamp"
                                                                  onclick="setTime('02:30')">02:30</span></p>
                             <p>Edit restaurant: <span class="timestamp" onclick="setTime('02:38')">02:38</span></p>
@@ -256,7 +269,7 @@
                             <p>Change order status: <span class="timestamp" onclick="setTime('04:30')">04:30</span></p>
                         </div>
                         <div>
-                            <h3>Admin</h3>
+                            <h2>Admin</h2>
                             <p>Login as admin: <span class="timestamp" onclick="setTime('04:55')">04:55</span></p>
                             <p>Add new restaurant: <span class="timestamp" onclick="setTime('05:00')">05:00</span></p>
                             <p>Edit restaurant: <span class="timestamp" onclick="setTime('05:13')">05:13</span></p>

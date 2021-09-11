@@ -8,7 +8,10 @@ const scrollBtn = document.querySelector('.scrollBtn');
 const SuccessAlert = document.querySelector('.success-alert')
 const ErrorAlert = document.querySelector('.error-alert')
 const contactForm = document.querySelector('.contact-form')
+const sliders = document.querySelectorAll('.slide-in')
+const faders = document.querySelectorAll('.fade-in')
 
+// BURGER MENU
 const responsiveBurgerMenuLogic = () => {
     // Toggle nav bar on small screens
     burgerBtn.addEventListener('click', (e) => {
@@ -56,6 +59,7 @@ const responsiveBurgerMenuLogic = () => {
     });
 }
 
+// SCROLL
 const scrollLogic = () => {
 //  Show the scroll to top button when the user scrolls down 40px from the top of the document
     const scrollFunction = () => {
@@ -73,12 +77,37 @@ const scrollLogic = () => {
     };
 }
 
+const appearOptions = {
+    threshold: 0,
+    rootMargin: "0px 0px -200px 0px"
+}
+
+const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return
+        } else {
+            entry.target.classList.add('appear')
+            appearOnScroll.unobserve(entry.target)
+        }
+    })
+}, appearOptions)
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader)
+})
+
+sliders.forEach(slider => {
+    appearOnScroll.observe(slider);
+})
+
 // When the user clicks on the button, scroll to the top of the document
 const scrollToTop = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
 
+// ALERT
 const alertLogic = () => {
     const AlertCloseButtons = document.querySelectorAll('.close-btn');
 
@@ -107,6 +136,7 @@ const showAlert = (alert) => {
     }, 5000)
 }
 
+// FORM
 const formLogic = () => {
     const nameInput = contactForm.elements['name']
     const emailInput = contactForm.elements['email']
@@ -186,6 +216,7 @@ const formLogic = () => {
     inputs.forEach(input => input.addEventListener('input', () => validateInputs()))
 }
 
+// MAIN
 const loadFunctions = () => {
     responsiveBurgerMenuLogic()
     scrollLogic()

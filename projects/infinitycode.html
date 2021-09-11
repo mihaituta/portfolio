@@ -42,8 +42,7 @@
         </nav>
         <main class="content">
             <section class="project-section">
-                <div class="slideshow-container">
-
+                <div class="slideshow-container fade-in">
                     <div class="slideshow-content">
                         <ul class="slideshow">
                             <li class="slideshow-slide current-slide fade">
@@ -110,44 +109,57 @@
                 </div>
 
                 <div class="project-description-container">
-                    <h1 class="title">InfinityCode</h1>
-                    <p>InfinityCode is a project made for college.</p>
+                    <article class="fade-in">
+                        <h1 class="title">InfinityCode</h1>
+                        <hr>
 
-                    <div class="links">
-                        <a class="video-btn" href="#video" rel="noreferrer">VIDEO</a>
-                    </div>
+                        <p>InfinityCode is a project made for college.</p>
 
-                    <h2>Technologies</h2>
-                    It was created using <span>HTML, CSS, JavaScript, PHP</span> and <span>MySQL.</span>
+                        <div class="links">
+                            <a class="video-btn" href="#video" rel="noreferrer">VIDEO</a>
+                        </div>
+                    </article>
 
-                    <h2>Functionalities</h2>
-                    <p>
-                        The website is an imaginary programming contest called <span>InfinityCode.</span>
-                    </p>
-                    <br>
+                    <article class="fade-in">
+                        <h1 class="title">Technologies</h1>
+                        <hr>
 
-                    <p>There are 8 pages: <span>home, rules, sponsors, news, participants, results</span> and <span>contact</span>
-                        that can be accessed by anyone, and an <span>administration page</span> that is hidden and
-                        protected with name and
-                        password for admins.</p>
-                    <br>
-                    <p> Users can register to the contest on the <span>participants</span> page.</p>
-                    <br>
+                        <p> It was created using <span>HTML, CSS, JavaScript, PHP</span> and <span>MySQL.</span></p>
+                    </article>
 
-                    <p><span>Administrators</span> can:</p>
-                    <ul>
-                        <li>Add, modify or delete <span>participants.</span></li>
-                        <li>Add, modify, or delete <span>news articles.</span></li>
-                    </ul>
+                    <article class="fade-in">
+                        <h1 class="title">Functionalities</h1>
+                        <hr>
 
-                    <div id="video" class="video-container">
+                        <p>
+                            The website is an imaginary programming contest called <span>InfinityCode.</span>
+                        </p>
+                        <br>
+
+                        <p>There are 8 pages: <span>home, rules, sponsors, news, participants, results</span> and <span>contact</span>
+                            that can be accessed by anyone, and an <span>administration page</span> that is hidden and
+                            protected with name and
+                            password for admins.</p>
+                        <br>
+                        <p> Users can register to the contest on the <span>participants</span> page.</p>
+                        <br>
+
+                        <p><span>Administrators</span> can:</p>
+                        <ul>
+                            <li>Add, modify or delete <span>participants.</span></li>
+                            <li>Add, modify, or delete <span>news articles.</span></li>
+                        </ul>
+                    </article>
+
+                    <div id="video" class="video-container fade-in">
                         <h1 class="title">Video Example</h1>
+                        <hr>
 
                         <video class="video" src="../assets/infinitycode/infinityCode.mp4" controls preload="auto"
                                muted></video>
                         <div class="timestamps-content">
                             <div class="user-timestamps">
-                                <h3>User</h3>
+                                <h2>User</h2>
                                 <p>Rules page: <span class="timestamp" onclick="setTime('00:06')">00:06</span></p>
                                 <p>Sponsors: <span class="timestamp" onclick="setTime('00:10')">00:10</span></p>
                                 <p>News page: <span class="timestamp" onclick="setTime('00:15')">00:15</span></p>
@@ -156,15 +168,15 @@
                                 <p>Contact page: <span class="timestamp" onclick="setTime('00:44')">00:44</span></p>
                             </div>
                             <div class="administration-timestamps">
-                                <h3>Admin</h3>
+                                <h2>Admin</h2>
                                 <p>Administration page: <span class="timestamp" onclick="setTime('00:47')">00:47</span>
                                 </p>
                                 <p>Edit participant: <span class="timestamp" onclick="setTime('01:00')">01:00</span></p>
                                 <p>Add new article: <span class="timestamp" onclick="setTime('01:11')">01:11</span></p>
                             </div>
                         </div>
-
                     </div>
+                </div>
             </section>
         </main>
 
