@@ -4,6 +4,7 @@ const navButtons = document.querySelectorAll('.nav-list li')
 const main = document.querySelector('main')
 const navLinks = document.querySelectorAll('.nav-links')
 const body = document.querySelector('body')
+const html = document.querySelector('html')
 const scrollBtn = document.querySelector('.scrollBtn');
 const SuccessAlert = document.querySelector('.success-alert')
 const ErrorAlert = document.querySelector('.error-alert')
@@ -19,7 +20,8 @@ const responsiveBurgerMenuLogic = () => {
         e.stopPropagation()
         nav.classList.toggle('nav-active')
         main.classList.toggle('blur')
-        body.classList.toggle('overflow')
+        // body.classList.toggle('overflow')
+        html.classList.toggle('overflow')
 
         // FadeIn navbar links
         navButtons.forEach((button, index) => {
@@ -35,7 +37,8 @@ const responsiveBurgerMenuLogic = () => {
             nav.classList.remove('nav-active')
             main.classList.remove('blur')
             burgerBtn.classList.remove('toggle');
-            body.classList.remove('overflow');
+            // body.classList.remove('overflow');
+            html.classList.remove('overflow')
             navButtons.forEach((button) => {
                 button.style.animation = ''
             })
@@ -51,7 +54,9 @@ const responsiveBurgerMenuLogic = () => {
             nav.classList.remove('nav-active')
             main.classList.remove('blur')
             burgerBtn.classList.remove('toggle');
-            body.classList.remove('overflow');
+            // body.classList.remove('overflow');
+            html.classList.remove('overflow')
+
             navButtons.forEach((button) => {
                 button.style.animation = ''
             })
