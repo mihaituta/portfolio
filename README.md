@@ -20,4 +20,4 @@ It contains informations about me, my skills and my other projects.
 - It is hosted on **Netlify**
 
 ## Demo
- <img src="https://user-images.githubusercontent.com/41682806/133000829-fcab3a45-ae61-4bbb-bedf-d270b2649dd0.gif"/>
+ <img src="https://user-images.githubusercontent.com/41682806/133332693-75e8e3bd-0dea-41f8-8f5d-59fbc88fc94f.gif"/>
