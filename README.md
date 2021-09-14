@@ -21,3 +21,6 @@ It contains informations about me, my skills and my other projects.
 
 ## Demo
  <img src="https://user-images.githubusercontent.com/41682806/133332693-75e8e3bd-0dea-41f8-8f5d-59fbc88fc94f.gif"/>
+
+## Contact
+tutamihai@gmail.com
