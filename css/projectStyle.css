@@ -58,6 +58,10 @@ hr {
     list-style-type: disc;
     list-style-position: inside;
 }
+.nested-list {
+    margin-left: 3rem;
+}
+
 
 /* ------------ SLIDESHOW ------------ */
 
@@ -257,7 +261,7 @@ hr {
 
 /* ------------- TABLETS ------------- */
 @media screen and (min-width: 481px) {
-    hr{
+    hr {
         width: 50%;
     }
 }
