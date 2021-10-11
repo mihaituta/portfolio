@@ -1299,7 +1299,7 @@ span {
     .project-content {
         -ms-grid-column: 1;
         -ms-grid-column-span: 6;
-        grid-column: 1 / 7;
+        grid-column: 1 / 8;
         grid-row: 1 / -1;
     }
 
@@ -1342,14 +1342,14 @@ span {
     }
 
     .project-img {
-        grid-column: 5 / -1;
+        grid-column: 6 / -1;
         grid-row: 1 / -1;
     }
 
     .project-img-reverse {
         -ms-grid-column: 1;
         -ms-grid-column-span: 8;
-        grid-column: 1 / 9;
+        grid-column: 1 / 8;
         grid-row: 1 / -1;
     }
 
