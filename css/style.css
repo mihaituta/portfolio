@@ -1310,7 +1310,7 @@ span {
     }
 
     .project-tools li {
-        background: var(--clr-black-200);
+        background: rgba(33, 33, 33, 0.9);
         color: var(--clr-green-500);
         padding: 0.4rem 0.8rem;
         margin-bottom: 0.8rem;
@@ -1354,7 +1354,7 @@ span {
     }
 
     .project-description {
-        background: var(--clr-black-300);
+        background: rgba(33, 33, 33, 0.9);
         line-height: 1.8rem;
         padding: 1rem;
         border-radius: 0.4rem;
