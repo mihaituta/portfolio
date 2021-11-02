@@ -1,8 +1,8 @@
 function initGoogleMap() {
-    let myLat = 51.364473520265456;
-    let myLng = 6.419280449229745;
-    const myCoords = new google.maps.LatLng(myLat, myLng);
+    let myLat = 44.34;
+    let myLng = 23.8;
 
+    const myCoords = new google.maps.LatLng(myLat, myLng);
     let map = new google.maps.Map(document.getElementById("map"), {
         zoom: 10,
         center: myCoords,
@@ -34,23 +34,22 @@ function initGoogleMap() {
         )));
     }
 
-    google.maps.event.addListenerOnce(map, "projection_changed", function () {
+    const mapMediaQuery = () => {
         if (window.matchMedia("(min-width: 1201px)").matches) {
-            map_recenter(myCoords, -350, 0);
+            map_recenter(myCoords, -300, 0);
+        } else if (window.matchMedia("(min-width: 1024px)").matches) {
+            map_recenter(myCoords, -250, 0);
         } else if (window.matchMedia("(min-width: 769px)").matches) {
-            map_recenter(myCoords, -350, 0);
+            map_recenter(myCoords, -210, 0);
         } else {
-            map_recenter(myCoords, -135, 0);
+            map_recenter(myCoords, 0, 0);
         }
+    }
 
+    google.maps.event.addListenerOnce(map, "projection_changed", function () {
+        mapMediaQuery()
         google.maps.event.addDomListener(window, 'resize', function () {
-            if (window.matchMedia("(min-width: 1201px)").matches) {
-                map_recenter(myCoords, -350, 0);
-            } else if (window.matchMedia("(min-width: 769px)").matches) {
-                map_recenter(myCoords, -350, 0);
-            } else {
-                map_recenter(myCoords, -135, 0);
-            }
+            mapMediaQuery()
         })
     });
 }
