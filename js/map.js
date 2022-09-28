@@ -1,10 +1,15 @@
 function initGoogleMap() {
-    let myLat = 44.34;
-    let myLng = 23.8;
+    // Craiova coords
+ /*   let myLat = 44.34;
+    let myLng = 23.8;*/
+
+    // Bucharest coords
+    let myLat = 44.435507;
+    let myLng = 26.1025236;
 
     const myCoords = new google.maps.LatLng(myLat, myLng);
     let map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 10,
+        zoom: 11,
         center: myCoords,
         mapId: '46d5929e81efda3',
         disableDefaultUI: true,
