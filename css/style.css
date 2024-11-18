@@ -491,6 +491,14 @@ span {
     margin-bottom: 0.5rem;
 }
 
+.java i {
+    color: #EA4335;
+}
+
+.spring i {
+    color: #6DB43D
+}
+
 .html i {
     color: #f16529
 }
@@ -511,32 +519,12 @@ span {
     color: #CE679A;
 }
 
-/*.node i {
-    color: #71B156;
-}
-
-.express i {
-    color: #71B156;
-}
-
-.mongo i {
-    color: #12964D;
-}*/
-
 .git i {
     color: #f1502f;
 }
 
 .github i {
     color: var(--clr-white-500);
-}
-
-.npm i {
-    color: #cc3534;
-}
-
-.responsive i {
-    color: #bb89f3;
 }
 
 .react i {
